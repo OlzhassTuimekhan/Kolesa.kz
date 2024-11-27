@@ -9,5 +9,6 @@ public class Main {
         for (Car car : carList) {
             System.out.println(car);
         }
+        System.out.println("End.");
     }
 }

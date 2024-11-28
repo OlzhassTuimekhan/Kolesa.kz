@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
         List<Car> cars = CarData.getPredefinedCars();
         Scanner scanner = new Scanner(System.in);
@@ -34,7 +35,7 @@ public class Main {
                         showCarsMenu(scanner, cars);
                         break;
                     case 2:
-                        System.out.println("Adding cars for selling will be implemented in the future.");
+                        addCar(scanner, cars);
                         break;
                     case 3:
                         System.out.println("Generating a license plate will be implemented in the future.");
@@ -142,6 +143,75 @@ public class Main {
             System.out.println("No cars found for the given criteria.");
         }
     }
+    private static void addCar(Scanner scanner, List<Car> cars) {
+        System.out.println("\nAdd a New Car");
+
+        try {
+            System.out.print("Enter Car ID: ");
+            int id = scanner.nextInt();
+            scanner.nextLine(); // Clear buffer
+
+            System.out.print("Enter Brand: ");
+            String brand = scanner.nextLine();
+
+            System.out.print("Enter Model: ");
+            String model = scanner.nextLine();
+
+            System.out.print("Enter Year: ");
+            int year = scanner.nextInt();
+            scanner.nextLine(); // Clear buffer
+
+            System.out.print("Enter Body Type: ");
+            String bodyType = scanner.nextLine();
+
+            System.out.print("Enter Color: ");
+            String color = scanner.nextLine();
+
+            System.out.print("Enter Engine Volume (e.g., 2.0): ");
+            double engineVolume = scanner.nextDouble();
+            scanner.nextLine(); // Clear buffer
+
+            System.out.print("Enter Gearbox Type: ");
+            String gearboxType = scanner.nextLine();
+
+            System.out.print("Enter Description: ");
+            String description = scanner.nextLine();
+
+            System.out.print("Enter Price: ");
+            double price = scanner.nextDouble();
+            scanner.nextLine(); // Clear buffer
+
+            System.out.print("Enter Seller Phone: ");
+            String sellerPhone = scanner.nextLine();
+
+            System.out.print("Enter VIN Code: ");
+            String vinCode = scanner.nextLine();
+
+            // Используем Builder для создания объекта Car
+            Car newCar = new Car.CarBuilder(id, brand, model)
+                    .year(year)
+                    .bodyType(bodyType)
+                    .color(color)
+                    .engineVolume(engineVolume)
+                    .gearboxType(gearboxType)
+                    .description(description)
+                    .price(price)
+                    .sellerPhone(sellerPhone)
+                    .vinCode(vinCode)
+                    .build();
+
+            // Добавляем новую машину в список
+            cars.add(newCar);
+
+            System.out.println("\nyour ad has been successfully added");
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input. Please try again.");
+            scanner.nextLine(); // Clear buffer
+        }
+    }
+
+
+
 
 
 }

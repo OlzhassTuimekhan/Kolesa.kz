@@ -87,21 +87,24 @@ class Car {
 
     @Override
     public String toString() {
-        return "Car{" +
-                "id=" + id +
-                ", brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                ", year=" + year +
-                ", bodyType='" + bodyType + '\'' +
-                ", color='" + color + '\'' +
-                ", engineVolume=" + engineVolume +
-                ", gearboxType='" + gearboxType + '\'' +
-                ", description='" + description + '\'' +
-                ", price=" + price +
-                ", isSold=" + isSold +
-                ", sellerPhone='" + sellerPhone + '\'' +
-                '}';
+        return "----------------------------------------\n" +
+                "Car ID        : " + id + "\n" +
+                "Brand         : " + brand + "\n" +
+                "Model         : " + model + "\n" +
+                "Year          : " + year + "\n" +
+                "Body Type     : " + bodyType + "\n" +
+                "Color         : " + color + "\n" +
+                "Engine Volume : " + engineVolume + "L\n" +
+                "Gearbox Type  : " + gearboxType + "\n" +
+                "Description   : " + description + "\n" +
+                "Price         : $" + price + "\n" +
+                "Seller Phone  : " + sellerPhone + "\n" +
+                "Sold Status   : " + (isSold ? "Sold" : "Available") + "\n" +
+                "----------------------------------------";
     }
+
+
+
 
     public static class CarBuilder {
         private final int id;

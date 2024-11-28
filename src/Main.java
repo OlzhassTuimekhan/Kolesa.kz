@@ -1,8 +1,10 @@
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        List<Car> cars = CarData.getPredefinedCars();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Car Management System!");
 
@@ -25,10 +27,10 @@ public class Main {
                 if (choice < 1 || choice > 8) {
                     throw new IllegalArgumentException("Invalid menu option. Please choose a number between 1 and 8.");
                 }
-d
+
                 switch (choice) {
                     case 1:
-                        showCarsMenu(scanner);
+                        showCarsMenu(scanner, cars);
                         break;
                     case 2:
                         System.out.println("Adding cars for selling will be implemented in the future.");
@@ -63,38 +65,54 @@ d
         }
     }
 
-    private static void showCarsMenu(Scanner scanner) {
+    private static void showCarsMenu(Scanner scanner, List<Car> cars) {
         try {
-            System.out.println("\nCar Search:");
-            System.out.println("1. Search by Brand");
-            System.out.println("2. Search by Year");
-            System.out.println("3. Search by Price");
-            System.out.println("4. Search by Brand and Model");
-            System.out.print("Choose an option: ");
 
-            int searchChoice = scanner.nextInt();
-            scanner.nextLine(); // Clear buffer
+            while (true) {
+                System.out.println("\nCar Search:");
+                System.out.println("1. Search by Brand");
+                System.out.println("2. Search by Year");
+                System.out.println("3. Search by Price");
+                System.out.println("4. Search by Brand and Model");
+                System.out.print("Choose an option: ");
+                int choice = scanner.nextInt();
+                scanner.nextLine();
 
-            if (searchChoice < 1 || searchChoice > 4) {
-                throw new IllegalArgumentException("Invalid search option. Please choose a number between 1 and 4.");
+                switch (choice) {
+                    case 1:
+                        System.out.print("\nEnter brand: ");
+                        String brand = scanner.nextLine();
+                        CarIterator brandIterator = new FilteredCarIterator(cars, car -> car.getBrand().equalsIgnoreCase(brand));
+                        displayResults(brandIterator);
+                        break;
+
+                    case 2:
+                        System.out.print("\nEnter year: ");
+                        int year = scanner.nextInt();
+                        scanner.nextLine();
+                        CarIterator yearIterator = new FilteredCarIterator(cars, car -> car.getYear() == year);
+                        displayResults(yearIterator);
+                        break;
+
+                    case 3:
+                        System.out.print("\nEnter minimum price: ");
+                        double minPrice = scanner.nextDouble();
+                        System.out.print("Enter maximum price: ");
+                        double maxPrice = scanner.nextDouble();
+                        scanner.nextLine();
+                        CarIterator priceIterator = new FilteredCarIterator(cars, car -> car.getPrice() >= minPrice && car.getPrice() <= maxPrice);
+                        displayResults(priceIterator);
+                        break;
+
+                    case 4:
+                        System.out.println("Exiting. Goodbye!");
+                        return;
+
+                    default:
+                        System.out.println("Invalid choice. Please try again.");
+                }
             }
 
-            switch (searchChoice) {
-                case 1:
-                    System.out.println("Search by Brand will be implemented in the future.");
-                    break;
-                case 2:
-                    System.out.println("Search by Year will be implemented in the future.");
-                    break;
-                case 3:
-                    System.out.println("Search by Price will be implemented in the future.");
-                    break;
-                case 4:
-                    System.out.println("Search by Brand and Model will be implemented in the future.");
-                    break;
-                default:
-                    System.out.println("Unexpected error.");
-            }
         } catch (InputMismatchException e) {
             System.out.println("Invalid input. Please enter a number between 1 and 4.");
             scanner.nextLine(); // Clear buffer to avoid infinite loop
@@ -102,4 +120,18 @@ d
             System.out.println(e.getMessage());
         }
     }
+
+    private static void displayResults(CarIterator iterator) {
+        System.out.println("\nSearch Results:");
+        boolean found = false;
+        while (iterator.hasNext()) {
+            found = true;
+            System.out.println(iterator.next());
+        }
+        if (!found) {
+            System.out.println("No cars found for the given criteria.");
+        }
+    }
+
+
 }

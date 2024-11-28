@@ -16,7 +16,7 @@ class Car {
     private boolean isSold;
     private final String sellerPhone;
 
-    private Car(CarBuilder builder) {
+    Car(CarBuilder builder) {
         this.id = builder.id;
         this.brand = builder.brand;
         this.model = builder.model;

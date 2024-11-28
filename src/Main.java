@@ -25,7 +25,7 @@ public class Main {
                 if (choice < 1 || choice > 8) {
                     throw new IllegalArgumentException("Invalid menu option. Please choose a number between 1 and 8.");
                 }
-
+d
                 switch (choice) {
                     case 1:
                         showCarsMenu(scanner);

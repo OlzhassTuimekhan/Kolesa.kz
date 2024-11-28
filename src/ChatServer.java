@@ -12,7 +12,7 @@ public class ChatServer implements Subject {
     }
 
     public void startServer() {
-        try (ServerSocket serverSocket = new ServerSocket(12345)) { // Порт 12345
+        try (ServerSocket serverSocket = new ServerSocket(8888)) { // Порт 12345
             System.out.println("Server started. Waiting for clients...");
             while (true) {
                 Socket clientSocket = serverSocket.accept();

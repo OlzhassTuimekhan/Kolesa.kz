@@ -6,6 +6,8 @@ public class Main {
 
     public static void main(String[] args) {
         List<Car> cars = CarData.getPredefinedCars();
+        CurrencyConverter currencyAdapter = new CurrencyAdapter();
+        BalanceManager balanceManager = new BalanceManager(currencyAdapter);
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Car Management System!");
 
@@ -18,16 +20,19 @@ public class Main {
                 System.out.println("4. Show my cars");
                 System.out.println("5. Show my balance");
                 System.out.println("6. Add money");
-                System.out.println("7. Show my transactions");
-                System.out.println("8. Buy Car");
-                System.out.println("9. Exit");
+                System.out.println("7.Link card");
+                System.out.println("8.Check linked card");
+                System.out.println("9. Show my transactions");
+                System.out.println("10. Buy Car");
+                System.out.println("11. Exit");
                 System.out.print("Choose an option: ");
 
                 int choice = scanner.nextInt();
+                System.out.println("----------------------------------------\n");
                 scanner.nextLine(); // Clear buffer
 
-                if (choice < 1 || choice > 8) {
-                    throw new IllegalArgumentException("Invalid menu option. Please choose a number between 1 and 8.");
+                if (choice < 1 || choice > 11) {
+                    throw new IllegalArgumentException("Invalid menu option. Please choose a number between 1 and 11.");
                 }
 //
                 switch (choice) {
@@ -36,6 +41,7 @@ public class Main {
                         break;
                     case 2:
                         addCar(scanner, cars);
+                        //
                         break;
                     case 3:
                         System.out.println("Generating a license plate will be implemented in the future.");
@@ -44,18 +50,24 @@ public class Main {
                         System.out.println("Showing my cars will be implemented in the future.");
                         break;
                     case 5:
-                        System.out.println("Showing my balance will be implemented in the future.");
+                        balanceManager.showBalance();
                         break;
                     case 6:
-                        System.out.println("Adding money will be implemented in the future.");
+                        addMoneyMenu(scanner, balanceManager);
                         break;
                     case 7:
-                        System.out.println("Showing my transactions will be implemented in the future.");
+                        linkCardMenu(scanner, balanceManager);
                         break;
                     case 8:
+                        balanceManager.checkLinkedCard();
+                        break;
+                    case 9:
+                        balanceManager.showTransactions();
+                        break;
+                    case 10:
                         System.out.println("For buying ENTER VINCODE");
                         return;
-                    case 9:
+                    case 11:
                         System.out.println("Exiting. Goodbye!");
                         return;
                     default:
@@ -132,6 +144,24 @@ public class Main {
         }
     }
 
+    private static void addMoneyMenu(Scanner scanner, BalanceManager balanceManager) {
+        if (!balanceManager.isCardLinked()) {
+            System.out.println("You must link a card before adding money.");
+            return;
+        }
+        try {
+            System.out.print("Enter currency (USD, EUR, RUB, KZT): ");
+            String currency = scanner.nextLine().toUpperCase();
+            System.out.print("Enter amount: ");
+            double amount = scanner.nextDouble();
+            scanner.nextLine(); // Очистить буфер
+            balanceManager.addMoney(currency, amount);
+        } catch (Exception e) {
+            System.out.println("Invalid input. Try again.");
+            scanner.nextLine(); // Очистить буфер
+        }
+    }
+
     private static void displayResults(CarIterator iterator) {
         System.out.println("\nSearch Results:");
         boolean found = false;
@@ -143,6 +173,13 @@ public class Main {
             System.out.println("No cars found for the given criteria.");
         }
     }
+
+    private static void linkCardMenu(Scanner scanner, BalanceManager balanceManager) {
+        System.out.print("Enter a 16-digit card number: ");
+        String cardNumber = scanner.nextLine();
+        balanceManager.linkCard(cardNumber);
+    }
+
     private static void addCar(Scanner scanner, List<Car> cars) {
         System.out.println("\nAdd a New Car");
 

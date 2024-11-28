@@ -18,7 +18,7 @@ public class BalanceManager {
     public void linkCard(String cardNumber) {
         if (cardNumber.matches("\\d{16}")) { // Проверяем, что карта состоит из 16 цифр
             this.linkedCard = cardNumber;
-            System.out.println("Card linked successfully: **** **** **** " + cardNumber.substring(12));
+            System.out.println("Card linked successfully: ** ** **** " + cardNumber.substring(12));
         } else {
             System.out.println("Invalid card number. Please enter a valid 16-digit card number.");
         }
@@ -59,7 +59,7 @@ public class BalanceManager {
         if (linkedCard == null) {
             System.out.println("No card is linked.");
         } else {
-            System.out.println("Linked card: **** **** **** " + linkedCard.substring(12));
+            System.out.println("Linked card: ** ** **** " + linkedCard.substring(12));
         }
     }
 

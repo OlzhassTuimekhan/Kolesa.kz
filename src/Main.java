@@ -8,7 +8,7 @@ public class Main {
         CurrencyConverter currencyAdapter = new CurrencyAdapter(); // Создаем адаптер для конвертации валют
         BalanceManager balanceManager = new BalanceManager(currencyAdapter); // Создаем менеджер баланса
         Scanner scanner = new Scanner(System.in);
-
+//
         System.out.println("Welcome to the Car Management System!");
 
         while (true) {

@@ -15,6 +15,7 @@ class Car {
     private final double price;
     private boolean isSold;
     private final String sellerPhone;
+    private final String vinCode;
 
     Car(CarBuilder builder) {
         this.id = builder.id;
@@ -29,6 +30,7 @@ class Car {
         this.price = builder.price;
         this.isSold = builder.isSold;
         this.sellerPhone = builder.sellerPhone;
+        this.vinCode = builder.vinCode;
     }
 
     // Геттеры для всех полей
@@ -79,6 +81,9 @@ class Car {
     public String getSellerPhone() {
         return sellerPhone;
     }
+    public String getVinCode() {
+        return vinCode;
+    }
 
     // Сеттер для isSold
     public void setSold(boolean sold) {
@@ -100,6 +105,7 @@ class Car {
                 "Price         : $" + price + "\n" +
                 "Seller Phone  : " + sellerPhone + "\n" +
                 "Sold Status   : " + (isSold ? "Sold" : "Available") + "\n" +
+                "VIN Code      : " + vinCode + "\n" +
                 "----------------------------------------";
     }
 
@@ -119,6 +125,8 @@ class Car {
         private double price;
         private boolean isSold = false; // По умолчанию машина не продана
         private String sellerPhone;
+        private String vinCode;
+
 
         public CarBuilder(int id, String brand, String model) {
             this.id = id;
@@ -163,6 +171,10 @@ class Car {
 
         public CarBuilder sellerPhone(String sellerPhone) {
             this.sellerPhone = sellerPhone;
+            return this;
+        }
+        public CarBuilder vinCode(String vinCode) {
+            this.vinCode = vinCode;
             return this;
         }
 

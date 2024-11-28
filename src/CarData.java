@@ -4,664 +4,724 @@ import java.util.List;
 public class CarData {
     public static List<Car> getPredefinedCars() {
         List<Car> cars = new ArrayList<>();
-        cars.add(new Car.CarBuilder(1, "Toyota", "Corolla")
-                .year(2011)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("White")
-                .engineVolume(2.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(10500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(2, "Toyota", "Camry")
-                .year(2012)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("Black")
-                .engineVolume(2.5)  // Random engine volume
-                .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(11000)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(3, "Toyota", "Hilux")
-                .year(2013)  // Random year between 2010-2022
-                .bodyType("Sedan")
-                .color("White")
-                .engineVolume(3.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(11500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(4, "Toyota", "Land Cruiser")
-                .year(2014)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("Black")
-                .engineVolume(1.5)  // Random engine volume
-                .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(12000)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(5, "Toyota", "Prado")
-                .year(2015)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("White")
-                .engineVolume(2.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(12500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(6, "Toyota", "Yaris")
-                .year(2016)  // Random year between 2010-2022
+        cars.add(new Car.CarBuilder(1, "Honda", "Model1")
+                .year(2011)
                 .bodyType("Sedan")
                 .color("Black")
-                .engineVolume(2.5)  // Random engine volume
-                .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(13000)  // Random price increment
+                .engineVolume(2.0)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(10500)
                 .sellerPhone("+123456789")
+                .vinCode("VIN000001")
                 .build());
 
-        cars.add(new Car.CarBuilder(7, "Toyota", "RAV4")
-                .year(2017)  // Random year between 2010-2022
+        cars.add(new Car.CarBuilder(2, "Toyota", "Model2")
+                .year(2012)
                 .bodyType("SUV")
                 .color("White")
-                .engineVolume(3.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(13500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(8, "Toyota", "Highlander")
-                .year(2018)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("Black")
-                .engineVolume(1.5)  // Random engine volume
+                .engineVolume(2.5)
                 .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(14000)  // Random price increment
+                .description("Spacious and powerful")
+                .price(11000)
                 .sellerPhone("+123456789")
+                .vinCode("VIN000002")
                 .build());
 
-        cars.add(new Car.CarBuilder(9, "Toyota", "4Runner")
-                .year(2019)  // Random year between 2010-2022
-                .bodyType("Sedan")
-                .color("White")
-                .engineVolume(2.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(14500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(10, "Toyota", "Avalon")
-                .year(2020)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("Black")
-                .engineVolume(2.5)  // Random engine volume
-                .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(15000)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(11, "Honda", "Civic")
-                .year(2021)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("White")
-                .engineVolume(3.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(15500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(12, "Honda", "Accord")
-                .year(2022)  // Random year between 2010-2022
+        cars.add(new Car.CarBuilder(3, "Honda", "Model3")
+                .year(2013)
                 .bodyType("Sedan")
                 .color("Black")
-                .engineVolume(1.5)  // Random engine volume
-                .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(16000)  // Random price increment
+                .engineVolume(1.5)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(11500)
                 .sellerPhone("+123456789")
+                .vinCode("VIN000003")
                 .build());
 
-        cars.add(new Car.CarBuilder(13, "Honda", "CR-V")
-                .year(2010)  // Random year between 2010-2022
+        cars.add(new Car.CarBuilder(4, "Toyota", "Model4")
+                .year(2014)
                 .bodyType("SUV")
                 .color("White")
-                .engineVolume(2.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(16500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(14, "Honda", "Pilot")
-                .year(2011)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("Black")
-                .engineVolume(2.5)  // Random engine volume
+                .engineVolume(2.0)
                 .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(17000)  // Random price increment
+                .description("Spacious and powerful")
+                .price(12000)
                 .sellerPhone("+123456789")
+                .vinCode("VIN000004")
                 .build());
 
-        cars.add(new Car.CarBuilder(15, "Honda", "Fit")
-                .year(2012)  // Random year between 2010-2022
-                .bodyType("Sedan")
-                .color("White")
-                .engineVolume(3.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(17500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(16, "Honda", "HR-V")
-                .year(2013)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("Black")
-                .engineVolume(1.5)  // Random engine volume
-                .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(18000)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(17, "Honda", "Odyssey")
-                .year(2014)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("White")
-                .engineVolume(2.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(18500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(18, "Honda", "Ridgeline")
-                .year(2015)  // Random year between 2010-2022
+        cars.add(new Car.CarBuilder(5, "Honda", "Model5")
+                .year(2015)
                 .bodyType("Sedan")
                 .color("Black")
-                .engineVolume(2.5)  // Random engine volume
-                .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(19000)  // Random price increment
+                .engineVolume(2.5)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(12500)
                 .sellerPhone("+123456789")
+                .vinCode("VIN000005")
                 .build());
 
-        cars.add(new Car.CarBuilder(19, "Honda", "Insight")
-                .year(2016)  // Random year between 2010-2022
+        cars.add(new Car.CarBuilder(6, "Toyota", "Model6")
+                .year(2016)
                 .bodyType("SUV")
                 .color("White")
-                .engineVolume(3.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(19500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(20, "Honda", "Passport")
-                .year(2017)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("Black")
-                .engineVolume(1.5)  // Random engine volume
+                .engineVolume(1.5)
                 .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(20000)  // Random price increment
+                .description("Spacious and powerful")
+                .price(13000)
                 .sellerPhone("+123456789")
+                .vinCode("VIN000006")
                 .build());
 
-        cars.add(new Car.CarBuilder(21, "Ford", "Focus")
-                .year(2018)  // Random year between 2010-2022
-                .bodyType("Sedan")
-                .color("White")
-                .engineVolume(2.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(20500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(22, "Ford", "Fusion")
-                .year(2019)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("Black")
-                .engineVolume(2.5)  // Random engine volume
-                .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(21000)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(23, "Ford", "Escape")
-                .year(2020)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("White")
-                .engineVolume(3.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(21500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(24, "Ford", "Explorer")
-                .year(2021)  // Random year between 2010-2022
+        cars.add(new Car.CarBuilder(7, "Honda", "Model7")
+                .year(2017)
                 .bodyType("Sedan")
                 .color("Black")
-                .engineVolume(1.5)  // Random engine volume
-                .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(22000)  // Random price increment
+                .engineVolume(2.0)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(13500)
                 .sellerPhone("+123456789")
+                .vinCode("VIN000007")
                 .build());
 
-        cars.add(new Car.CarBuilder(25, "Ford", "Edge")
-                .year(2022)  // Random year between 2010-2022
+        cars.add(new Car.CarBuilder(8, "Toyota", "Model8")
+                .year(2018)
                 .bodyType("SUV")
                 .color("White")
-                .engineVolume(2.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(22500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(26, "Ford", "Mustang")
-                .year(2010)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("Black")
-                .engineVolume(2.5)  // Random engine volume
+                .engineVolume(2.5)
                 .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(23000)  // Random price increment
+                .description("Spacious and powerful")
+                .price(14000)
                 .sellerPhone("+123456789")
+                .vinCode("VIN000008")
                 .build());
 
-        cars.add(new Car.CarBuilder(27, "Ford", "Expedition")
-                .year(2011)  // Random year between 2010-2022
-                .bodyType("Sedan")
-                .color("White")
-                .engineVolume(3.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(23500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(28, "Ford", "Ranger")
-                .year(2012)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("Black")
-                .engineVolume(1.5)  // Random engine volume
-                .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(24000)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(29, "Ford", "F-150")
-                .year(2013)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("White")
-                .engineVolume(2.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(24500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(30, "Ford", "Bronco")
-                .year(2014)  // Random year between 2010-2022
+        cars.add(new Car.CarBuilder(9, "Honda", "Model9")
+                .year(2019)
                 .bodyType("Sedan")
                 .color("Black")
-                .engineVolume(2.5)  // Random engine volume
-                .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(25000)  // Random price increment
+                .engineVolume(1.5)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(14500)
                 .sellerPhone("+123456789")
+                .vinCode("VIN000009")
                 .build());
 
-        cars.add(new Car.CarBuilder(31, "Chevrolet", "Malibu")
-                .year(2015)  // Random year between 2010-2022
+        cars.add(new Car.CarBuilder(10, "Toyota", "Model10")
+                .year(2020)
                 .bodyType("SUV")
                 .color("White")
-                .engineVolume(3.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(25500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(32, "Chevrolet", "Impala")
-                .year(2016)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("Black")
-                .engineVolume(1.5)  // Random engine volume
+                .engineVolume(2.0)
                 .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(26000)  // Random price increment
+                .description("Spacious and powerful")
+                .price(15000)
                 .sellerPhone("+123456789")
+                .vinCode("VIN000010")
                 .build());
 
-        cars.add(new Car.CarBuilder(33, "Chevrolet", "Equinox")
-                .year(2017)  // Random year between 2010-2022
-                .bodyType("Sedan")
-                .color("White")
-                .engineVolume(2.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(26500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(34, "Chevrolet", "Traverse")
-                .year(2018)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("Black")
-                .engineVolume(2.5)  // Random engine volume
-                .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(27000)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(35, "Chevrolet", "Tahoe")
-                .year(2019)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("White")
-                .engineVolume(3.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(27500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(36, "Chevrolet", "Suburban")
-                .year(2020)  // Random year between 2010-2022
+        cars.add(new Car.CarBuilder(11, "Honda", "Model11")
+                .year(2021)
                 .bodyType("Sedan")
                 .color("Black")
-                .engineVolume(1.5)  // Random engine volume
-                .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(28000)  // Random price increment
+                .engineVolume(2.5)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(15500)
                 .sellerPhone("+123456789")
+                .vinCode("VIN000011")
                 .build());
 
-        cars.add(new Car.CarBuilder(37, "Chevrolet", "Colorado")
-                .year(2021)  // Random year between 2010-2022
+        cars.add(new Car.CarBuilder(12, "Toyota", "Model12")
+                .year(2022)
                 .bodyType("SUV")
                 .color("White")
-                .engineVolume(2.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(28500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(38, "Chevrolet", "Silverado")
-                .year(2022)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("Black")
-                .engineVolume(2.5)  // Random engine volume
+                .engineVolume(1.5)
                 .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(29000)  // Random price increment
+                .description("Spacious and powerful")
+                .price(16000)
                 .sellerPhone("+123456789")
+                .vinCode("VIN000012")
                 .build());
 
-        cars.add(new Car.CarBuilder(39, "Chevrolet", "Blazer")
-                .year(2010)  // Random year between 2010-2022
-                .bodyType("Sedan")
-                .color("White")
-                .engineVolume(3.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(29500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(40, "Chevrolet", "Camaro")
-                .year(2011)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("Black")
-                .engineVolume(1.5)  // Random engine volume
-                .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(30000)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(41, "Nissan", "Altima")
-                .year(2012)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("White")
-                .engineVolume(2.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(30500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(42, "Nissan", "Maxima")
-                .year(2013)  // Random year between 2010-2022
+        cars.add(new Car.CarBuilder(13, "Honda", "Model13")
+                .year(2010)
                 .bodyType("Sedan")
                 .color("Black")
-                .engineVolume(2.5)  // Random engine volume
-                .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(31000)  // Random price increment
+                .engineVolume(2.0)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(16500)
                 .sellerPhone("+123456789")
+                .vinCode("VIN000013")
                 .build());
 
-        cars.add(new Car.CarBuilder(43, "Nissan", "Rogue")
-                .year(2014)  // Random year between 2010-2022
+        cars.add(new Car.CarBuilder(14, "Toyota", "Model14")
+                .year(2011)
                 .bodyType("SUV")
                 .color("White")
-                .engineVolume(3.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(31500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(44, "Nissan", "Murano")
-                .year(2015)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("Black")
-                .engineVolume(1.5)  // Random engine volume
+                .engineVolume(2.5)
                 .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(32000)  // Random price increment
+                .description("Spacious and powerful")
+                .price(17000)
                 .sellerPhone("+123456789")
+                .vinCode("VIN000014")
                 .build());
 
-        cars.add(new Car.CarBuilder(45, "Nissan", "Pathfinder")
-                .year(2016)  // Random year between 2010-2022
-                .bodyType("Sedan")
-                .color("White")
-                .engineVolume(2.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(32500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(46, "Nissan", "Frontier")
-                .year(2017)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("Black")
-                .engineVolume(2.5)  // Random engine volume
-                .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(33000)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(47, "Nissan", "Titan")
-                .year(2018)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("White")
-                .engineVolume(3.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(33500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(48, "Nissan", "Sentra")
-                .year(2019)  // Random year between 2010-2022
+        cars.add(new Car.CarBuilder(15, "Honda", "Model15")
+                .year(2012)
                 .bodyType("Sedan")
                 .color("Black")
-                .engineVolume(1.5)  // Random engine volume
-                .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(34000)  // Random price increment
+                .engineVolume(1.5)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(17500)
                 .sellerPhone("+123456789")
+                .vinCode("VIN000015")
                 .build());
 
-        cars.add(new Car.CarBuilder(49, "Nissan", "Versa")
-                .year(2020)  // Random year between 2010-2022
+        cars.add(new Car.CarBuilder(16, "Toyota", "Model16")
+                .year(2013)
                 .bodyType("SUV")
                 .color("White")
-                .engineVolume(2.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(34500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(50, "Nissan", "Armada")
-                .year(2021)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("Black")
-                .engineVolume(2.5)  // Random engine volume
+                .engineVolume(2.0)
                 .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(35000)  // Random price increment
+                .description("Spacious and powerful")
+                .price(18000)
                 .sellerPhone("+123456789")
+                .vinCode("VIN000016")
                 .build());
 
-        cars.add(new Car.CarBuilder(51, "Hyundai", "Elantra")
-                .year(2022)  // Random year between 2010-2022
-                .bodyType("Sedan")
-                .color("White")
-                .engineVolume(3.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(35500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(52, "Hyundai", "Sonata")
-                .year(2010)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("Black")
-                .engineVolume(1.5)  // Random engine volume
-                .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(36000)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(53, "Hyundai", "Tucson")
-                .year(2011)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("White")
-                .engineVolume(2.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(36500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(54, "Hyundai", "Santa Fe")
-                .year(2012)  // Random year between 2010-2022
+        cars.add(new Car.CarBuilder(17, "Honda", "Model17")
+                .year(2014)
                 .bodyType("Sedan")
                 .color("Black")
-                .engineVolume(2.5)  // Random engine volume
-                .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(37000)  // Random price increment
+                .engineVolume(2.5)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(18500)
                 .sellerPhone("+123456789")
+                .vinCode("VIN000017")
                 .build());
 
-        cars.add(new Car.CarBuilder(55, "Hyundai", "Kona")
-                .year(2013)  // Random year between 2010-2022
+        cars.add(new Car.CarBuilder(18, "Toyota", "Model18")
+                .year(2015)
                 .bodyType("SUV")
                 .color("White")
-                .engineVolume(3.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(37500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(56, "Hyundai", "Palisade")
-                .year(2014)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("Black")
-                .engineVolume(1.5)  // Random engine volume
+                .engineVolume(1.5)
                 .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(38000)  // Random price increment
+                .description("Spacious and powerful")
+                .price(19000)
                 .sellerPhone("+123456789")
+                .vinCode("VIN000018")
                 .build());
 
-        cars.add(new Car.CarBuilder(57, "Hyundai", "Accent")
-                .year(2015)  // Random year between 2010-2022
-                .bodyType("Sedan")
-                .color("White")
-                .engineVolume(2.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(38500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(58, "Hyundai", "Veloster")
-                .year(2016)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("Black")
-                .engineVolume(2.5)  // Random engine volume
-                .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(39000)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(59, "Hyundai", "Ioniq")
-                .year(2017)  // Random year between 2010-2022
-                .bodyType("SUV")
-                .color("White")
-                .engineVolume(3.0)  // Random engine volume
-                .gearboxType("Manual")
-                .description("Powerful and spacious vehicle.")
-                .price(39500)  // Random price increment
-                .sellerPhone("+123456789")
-                .build());
-
-        cars.add(new Car.CarBuilder(60, "Hyundai", "Genesis")
-                .year(2018)  // Random year between 2010-2022
+        cars.add(new Car.CarBuilder(19, "Honda", "Model19")
+                .year(2016)
                 .bodyType("Sedan")
                 .color("Black")
-                .engineVolume(1.5)  // Random engine volume
-                .gearboxType("Automatic")
-                .description("Reliable and fuel-efficient car.")
-                .price(40000)  // Random price increment
+                .engineVolume(2.0)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(19500)
                 .sellerPhone("+123456789")
+                .vinCode("VIN000019")
+                .build());
+
+        cars.add(new Car.CarBuilder(20, "Toyota", "Model20")
+                .year(2017)
+                .bodyType("SUV")
+                .color("White")
+                .engineVolume(2.5)
+                .gearboxType("Automatic")
+                .description("Spacious and powerful")
+                .price(20000)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000020")
+                .build());
+
+        cars.add(new Car.CarBuilder(21, "Honda", "Model21")
+                .year(2018)
+                .bodyType("Sedan")
+                .color("Black")
+                .engineVolume(1.5)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(20500)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000021")
+                .build());
+
+        cars.add(new Car.CarBuilder(22, "Toyota", "Model22")
+                .year(2019)
+                .bodyType("SUV")
+                .color("White")
+                .engineVolume(2.0)
+                .gearboxType("Automatic")
+                .description("Spacious and powerful")
+                .price(21000)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000022")
+                .build());
+
+        cars.add(new Car.CarBuilder(23, "Honda", "Model23")
+                .year(2020)
+                .bodyType("Sedan")
+                .color("Black")
+                .engineVolume(2.5)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(21500)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000023")
+                .build());
+
+        cars.add(new Car.CarBuilder(24, "Toyota", "Model24")
+                .year(2021)
+                .bodyType("SUV")
+                .color("White")
+                .engineVolume(1.5)
+                .gearboxType("Automatic")
+                .description("Spacious and powerful")
+                .price(22000)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000024")
+                .build());
+
+        cars.add(new Car.CarBuilder(25, "Honda", "Model25")
+                .year(2022)
+                .bodyType("Sedan")
+                .color("Black")
+                .engineVolume(2.0)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(22500)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000025")
+                .build());
+
+        cars.add(new Car.CarBuilder(26, "Toyota", "Model26")
+                .year(2010)
+                .bodyType("SUV")
+                .color("White")
+                .engineVolume(2.5)
+                .gearboxType("Automatic")
+                .description("Spacious and powerful")
+                .price(23000)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000026")
+                .build());
+
+        cars.add(new Car.CarBuilder(27, "Honda", "Model27")
+                .year(2011)
+                .bodyType("Sedan")
+                .color("Black")
+                .engineVolume(1.5)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(23500)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000027")
+                .build());
+
+        cars.add(new Car.CarBuilder(28, "Toyota", "Model28")
+                .year(2012)
+                .bodyType("SUV")
+                .color("White")
+                .engineVolume(2.0)
+                .gearboxType("Automatic")
+                .description("Spacious and powerful")
+                .price(24000)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000028")
+                .build());
+
+        cars.add(new Car.CarBuilder(29, "Honda", "Model29")
+                .year(2013)
+                .bodyType("Sedan")
+                .color("Black")
+                .engineVolume(2.5)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(24500)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000029")
+                .build());
+
+        cars.add(new Car.CarBuilder(30, "Toyota", "Model30")
+                .year(2014)
+                .bodyType("SUV")
+                .color("White")
+                .engineVolume(1.5)
+                .gearboxType("Automatic")
+                .description("Spacious and powerful")
+                .price(25000)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000030")
+                .build());
+
+        cars.add(new Car.CarBuilder(31, "Honda", "Model31")
+                .year(2015)
+                .bodyType("Sedan")
+                .color("Black")
+                .engineVolume(2.0)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(25500)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000031")
+                .build());
+
+        cars.add(new Car.CarBuilder(32, "Toyota", "Model32")
+                .year(2016)
+                .bodyType("SUV")
+                .color("White")
+                .engineVolume(2.5)
+                .gearboxType("Automatic")
+                .description("Spacious and powerful")
+                .price(26000)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000032")
+                .build());
+
+        cars.add(new Car.CarBuilder(33, "Honda", "Model33")
+                .year(2017)
+                .bodyType("Sedan")
+                .color("Black")
+                .engineVolume(1.5)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(26500)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000033")
+                .build());
+
+        cars.add(new Car.CarBuilder(34, "Toyota", "Model34")
+                .year(2018)
+                .bodyType("SUV")
+                .color("White")
+                .engineVolume(2.0)
+                .gearboxType("Automatic")
+                .description("Spacious and powerful")
+                .price(27000)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000034")
+                .build());
+
+        cars.add(new Car.CarBuilder(35, "Honda", "Model35")
+                .year(2019)
+                .bodyType("Sedan")
+                .color("Black")
+                .engineVolume(2.5)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(27500)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000035")
+                .build());
+
+        cars.add(new Car.CarBuilder(36, "Toyota", "Model36")
+                .year(2020)
+                .bodyType("SUV")
+                .color("White")
+                .engineVolume(1.5)
+                .gearboxType("Automatic")
+                .description("Spacious and powerful")
+                .price(28000)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000036")
+                .build());
+
+        cars.add(new Car.CarBuilder(37, "Honda", "Model37")
+                .year(2021)
+                .bodyType("Sedan")
+                .color("Black")
+                .engineVolume(2.0)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(28500)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000037")
+                .build());
+
+        cars.add(new Car.CarBuilder(38, "Toyota", "Model38")
+                .year(2022)
+                .bodyType("SUV")
+                .color("White")
+                .engineVolume(2.5)
+                .gearboxType("Automatic")
+                .description("Spacious and powerful")
+                .price(29000)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000038")
+                .build());
+
+        cars.add(new Car.CarBuilder(39, "Honda", "Model39")
+                .year(2010)
+                .bodyType("Sedan")
+                .color("Black")
+                .engineVolume(1.5)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(29500)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000039")
+                .build());
+
+        cars.add(new Car.CarBuilder(40, "Toyota", "Model40")
+                .year(2011)
+                .bodyType("SUV")
+                .color("White")
+                .engineVolume(2.0)
+                .gearboxType("Automatic")
+                .description("Spacious and powerful")
+                .price(30000)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000040")
+                .build());
+
+        cars.add(new Car.CarBuilder(41, "Honda", "Model41")
+                .year(2012)
+                .bodyType("Sedan")
+                .color("Black")
+                .engineVolume(2.5)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(30500)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000041")
+                .build());
+
+        cars.add(new Car.CarBuilder(42, "Toyota", "Model42")
+                .year(2013)
+                .bodyType("SUV")
+                .color("White")
+                .engineVolume(1.5)
+                .gearboxType("Automatic")
+                .description("Spacious and powerful")
+                .price(31000)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000042")
+                .build());
+
+        cars.add(new Car.CarBuilder(43, "Honda", "Model43")
+                .year(2014)
+                .bodyType("Sedan")
+                .color("Black")
+                .engineVolume(2.0)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(31500)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000043")
+                .build());
+
+        cars.add(new Car.CarBuilder(44, "Toyota", "Model44")
+                .year(2015)
+                .bodyType("SUV")
+                .color("White")
+                .engineVolume(2.5)
+                .gearboxType("Automatic")
+                .description("Spacious and powerful")
+                .price(32000)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000044")
+                .build());
+
+        cars.add(new Car.CarBuilder(45, "Honda", "Model45")
+                .year(2016)
+                .bodyType("Sedan")
+                .color("Black")
+                .engineVolume(1.5)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(32500)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000045")
+                .build());
+
+        cars.add(new Car.CarBuilder(46, "Toyota", "Model46")
+                .year(2017)
+                .bodyType("SUV")
+                .color("White")
+                .engineVolume(2.0)
+                .gearboxType("Automatic")
+                .description("Spacious and powerful")
+                .price(33000)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000046")
+                .build());
+
+        cars.add(new Car.CarBuilder(47, "Honda", "Model47")
+                .year(2018)
+                .bodyType("Sedan")
+                .color("Black")
+                .engineVolume(2.5)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(33500)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000047")
+                .build());
+
+        cars.add(new Car.CarBuilder(48, "Toyota", "Model48")
+                .year(2019)
+                .bodyType("SUV")
+                .color("White")
+                .engineVolume(1.5)
+                .gearboxType("Automatic")
+                .description("Spacious and powerful")
+                .price(34000)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000048")
+                .build());
+
+        cars.add(new Car.CarBuilder(49, "Honda", "Model49")
+                .year(2020)
+                .bodyType("Sedan")
+                .color("Black")
+                .engineVolume(2.0)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(34500)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000049")
+                .build());
+
+        cars.add(new Car.CarBuilder(50, "Toyota", "Model50")
+                .year(2021)
+                .bodyType("SUV")
+                .color("White")
+                .engineVolume(2.5)
+                .gearboxType("Automatic")
+                .description("Spacious and powerful")
+                .price(35000)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000050")
+                .build());
+
+        cars.add(new Car.CarBuilder(51, "Honda", "Model51")
+                .year(2022)
+                .bodyType("Sedan")
+                .color("Black")
+                .engineVolume(1.5)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(35500)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000051")
+                .build());
+
+        cars.add(new Car.CarBuilder(52, "Toyota", "Model52")
+                .year(2010)
+                .bodyType("SUV")
+                .color("White")
+                .engineVolume(2.0)
+                .gearboxType("Automatic")
+                .description("Spacious and powerful")
+                .price(36000)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000052")
+                .build());
+
+        cars.add(new Car.CarBuilder(53, "Honda", "Model53")
+                .year(2011)
+                .bodyType("Sedan")
+                .color("Black")
+                .engineVolume(2.5)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(36500)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000053")
+                .build());
+
+        cars.add(new Car.CarBuilder(54, "Toyota", "Model54")
+                .year(2012)
+                .bodyType("SUV")
+                .color("White")
+                .engineVolume(1.5)
+                .gearboxType("Automatic")
+                .description("Spacious and powerful")
+                .price(37000)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000054")
+                .build());
+
+        cars.add(new Car.CarBuilder(55, "Honda", "Model55")
+                .year(2013)
+                .bodyType("Sedan")
+                .color("Black")
+                .engineVolume(2.0)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(37500)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000055")
+                .build());
+
+        cars.add(new Car.CarBuilder(56, "Toyota", "Model56")
+                .year(2014)
+                .bodyType("SUV")
+                .color("White")
+                .engineVolume(2.5)
+                .gearboxType("Automatic")
+                .description("Spacious and powerful")
+                .price(38000)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000056")
+                .build());
+
+        cars.add(new Car.CarBuilder(57, "Honda", "Model57")
+                .year(2015)
+                .bodyType("Sedan")
+                .color("Black")
+                .engineVolume(1.5)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(38500)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000057")
+                .build());
+
+        cars.add(new Car.CarBuilder(58, "Toyota", "Model58")
+                .year(2016)
+                .bodyType("SUV")
+                .color("White")
+                .engineVolume(2.0)
+                .gearboxType("Automatic")
+                .description("Spacious and powerful")
+                .price(39000)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000058")
+                .build());
+
+        cars.add(new Car.CarBuilder(59, "Honda", "Model59")
+                .year(2017)
+                .bodyType("Sedan")
+                .color("Black")
+                .engineVolume(2.5)
+                .gearboxType("Manual")
+                .description("Fuel-efficient and reliable")
+                .price(39500)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000059")
+                .build());
+
+        cars.add(new Car.CarBuilder(60, "Toyota", "Model60")
+                .year(2018)
+                .bodyType("SUV")
+                .color("White")
+                .engineVolume(1.5)
+                .gearboxType("Automatic")
+                .description("Spacious and powerful")
+                .price(40000)
+                .sellerPhone("+123456789")
+                .vinCode("VIN000060")
                 .build());
         return cars;
     }

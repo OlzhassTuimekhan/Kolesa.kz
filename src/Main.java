@@ -18,7 +18,8 @@ public class Main {
                 System.out.println("5. Show my balance");
                 System.out.println("6. Add money");
                 System.out.println("7. Show my transactions");
-                System.out.println("8. Exit");
+                System.out.println("8. Buy Car");
+                System.out.println("9. Exit");
                 System.out.print("Choose an option: ");
 
                 int choice = scanner.nextInt();
@@ -51,6 +52,9 @@ public class Main {
                         System.out.println("Showing my transactions will be implemented in the future.");
                         break;
                     case 8:
+                        System.out.println("For buying ENTER VINCODE");
+                        return;
+                    case 9:
                         System.out.println("Exiting. Goodbye!");
                         return;
                     default:
@@ -67,13 +71,14 @@ public class Main {
 
     private static void showCarsMenu(Scanner scanner, List<Car> cars) {
         try {
-
-            while (true) {
+            boolean sh = true;
+            while (sh) {
                 System.out.println("\nCar Search:");
                 System.out.println("1. Search by Brand");
                 System.out.println("2. Search by Year");
                 System.out.println("3. Search by Price");
-                System.out.println("4. Search by Brand and Model");
+                System.out.println("4. Search by VINCODE ");
+                System.out.println("5. Go to Previous Menu.");
                 System.out.print("Choose an option: ");
                 int choice = scanner.nextInt();
                 scanner.nextLine();
@@ -105,9 +110,14 @@ public class Main {
                         break;
 
                     case 4:
-                        System.out.println("Exiting. Goodbye!");
-                        return;
-
+                        System.out.print("\nEnter VINCODE: ");
+                        String vin = scanner.nextLine();
+                        CarIterator vinIterator = new FilteredCarIterator(cars, car -> car.getVinCode().equalsIgnoreCase(vin));
+                        displayResults(vinIterator);
+                        break;
+                    case 5:
+                        sh = false;
+                        break;
                     default:
                         System.out.println("Invalid choice. Please try again.");
                 }

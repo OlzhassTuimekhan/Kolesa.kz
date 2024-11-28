@@ -41,6 +41,7 @@ public class Main {
                         break;
                     case 2:
                         addCar(scanner, cars);
+                        //
                         break;
                     case 3:
                         System.out.println("Generating a license plate will be implemented in the future.");

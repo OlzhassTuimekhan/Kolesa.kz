@@ -17,7 +17,6 @@ class Car {
     private final String sellerPhone;
     private final String vinCode;
 
-
     Car(CarBuilder builder) {
         this.id = builder.id;
         this.brand = builder.brand;
@@ -136,7 +135,7 @@ class Car {
         }
 
         public CarBuilder year(int year) {
-            this.year = year > 0 ? year : 2000; // Значение по умолчанию
+            this.year = year;
             return this;
         }
 
@@ -166,13 +165,9 @@ class Car {
         }
 
         public CarBuilder price(double price) {
-            if (price <= 0) {
-                throw new IllegalArgumentException("Price must be greater than 0.");
-            }
             this.price = price;
             return this;
         }
-
 
         public CarBuilder sellerPhone(String sellerPhone) {
             this.sellerPhone = sellerPhone;

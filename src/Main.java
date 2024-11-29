@@ -8,8 +8,9 @@ public class Main {
         List<Car> cars = CarData.getPredefinedCars();
         CurrencyConverter currencyAdapter = new CurrencyAdapter();
         BalanceManager balanceManager = new BalanceManager(currencyAdapter);
-        Account account = new Account(balanceManager);
+        Account account = new Account(balanceManager); // Создаем аккаунт
         CarPurchaseCaretaker caretaker = new CarPurchaseCaretaker();
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Car Management System!");
         //

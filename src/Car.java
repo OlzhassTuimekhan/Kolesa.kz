@@ -16,6 +16,7 @@ class Car {
     private boolean isSold;
     private final String sellerPhone;
     private final String vinCode;
+    private String licensePlate;
 
 
     Car(CarBuilder builder) {
@@ -31,6 +32,7 @@ class Car {
         this.price = builder.price;
         this.isSold = builder.isSold;
         this.sellerPhone = builder.sellerPhone;
+        this.licensePlate = licensePlate;
         this.vinCode = builder.vinCode;
     }
 
@@ -86,6 +88,14 @@ class Car {
         return vinCode;
     }
 
+    public String getLicensePlate() {
+        return licensePlate;
+    }
+
+    public void setLicensePlate(String licensePlate) {
+        this.licensePlate = licensePlate;
+    }
+
     // Сеттер для isSold
     public void setSold(boolean sold) {
         isSold = sold;
@@ -105,7 +115,8 @@ class Car {
                 "Description   : " + description + "\n" +
                 "Price         : " + String.format("%,.0f", price) + " KZT\n" +
                 "Seller Phone  : " + sellerPhone + "\n" +
-                "Sold Status   : " + (isSold ? "Sold" : "Available") + "\n" +
+                "Status        : " + (isSold ? "SOLD" : "AVAILABLE") + "\n"  +
+                "License Plate : " + (licensePlate != null ? licensePlate : "Not assigned") + "\n" +
                 "VIN Code      : " + vinCode + "\n" +
                 "----------------------------------------";
     }
@@ -127,7 +138,7 @@ class Car {
         private boolean isSold = false; // По умолчанию машина не продана
         private String sellerPhone;
         private String vinCode;
-
+        private String licensePlate;
 
         public CarBuilder(int id, String brand, String model) {
             this.id = id;
@@ -170,6 +181,11 @@ class Car {
                 throw new IllegalArgumentException("Price must be greater than 0.");
             }
             this.price = price;
+            return this;
+        }
+
+        public CarBuilder licensePlate(String licensePlate) {
+            this.licensePlate = licensePlate;
             return this;
         }
 

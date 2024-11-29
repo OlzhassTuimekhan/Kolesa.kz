@@ -17,13 +17,15 @@ public class LicensePlateGenerator {
     }
 
     // Метод для назначения госномера по VIN-коду
-    public String assignLicensePlate(String vinCode, List<Car> cars) {
-        // Проверяем, существует ли машина с таким VIN-кодом
-        Optional<Car> carOptional = cars.stream()
+    public String assignLicensePlateToOwnedCar(String vinCode, Account account) {
+        // Проверяем, есть ли машина с этим VIN-кодом в коллекции купленных машин
+        Optional<Car> carOptional = account.getOwnedCars().stream()
                 .filter(car -> car.getVinCode().equalsIgnoreCase(vinCode))
                 .findFirst();
 
         if (carOptional.isPresent()) {
+            Car car = carOptional.get();
+
             if (licensePlates.containsKey(vinCode)) {
                 return "License plate already assigned: " + licensePlates.get(vinCode);
             }
@@ -31,9 +33,10 @@ public class LicensePlateGenerator {
             // Генерация госномера через текущую стратегию
             String licensePlate = strategy.generateLicensePlate();
             licensePlates.put(vinCode, licensePlate);
-            return "License plate " + licensePlate + " assigned to car with VIN " + vinCode;
+            car.setLicensePlate(licensePlate); // Присваиваем номер машине
+            return "License plate " + licensePlate + " assigned to your car with VIN " + vinCode;
         } else {
-            return "Car with VIN " + vinCode + " not found.";
+            return "No owned car with VIN " + vinCode + " found in your account.";
         }
     }
 

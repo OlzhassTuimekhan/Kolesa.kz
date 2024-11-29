@@ -19,6 +19,10 @@ public class Account {
         ownedCars.remove(car);
     }
 
+    public List<Car> getOwnedCars() {
+        return new ArrayList<>(ownedCars); // Возвращаем копию списка машин
+    }
+
     // Создать снимок состояния
     public CarPurchaseMemento saveState() {
         return new CarPurchaseMemento(ownedCars, balanceManager.getBalanceInKZT());

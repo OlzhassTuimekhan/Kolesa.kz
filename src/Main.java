@@ -10,6 +10,7 @@ public class Main {
         BalanceManager balanceManager = new BalanceManager(currencyAdapter);
         Account account = new Account(balanceManager); // Создаем аккаунт
         CarPurchaseCaretaker caretaker = new CarPurchaseCaretaker();
+        LicensePlateGenerator generator = new LicensePlateGenerator(new StandardLicensePlateStrategy());
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Car Management System!");
@@ -63,10 +64,14 @@ public class Main {
                             strategy = new StandardLicensePlateStrategy();
                         }
 
-                        LicensePlateGenerator generator = new LicensePlateGenerator(strategy);
-                        System.out.print("Enter VIN Code to generate license plate: ");
+                        // Установить стратегию генерации
+                        generator.setStrategy(strategy);
+
+                        System.out.print("Enter VIN Code of your owned car to generate license plate: ");
                         String vinCode = scanner.nextLine();
-                        String result = generator.assignLicensePlate(vinCode, cars);
+
+                        // Генерация и привязка номера к машине пользователя
+                        String result = generator.assignLicensePlateToOwnedCar(vinCode, account);
                         System.out.println(result);
                         break;
                     case 4:
@@ -186,8 +191,13 @@ public class Main {
         System.out.println("\nSearch Results:");
         boolean found = false;
         while (iterator.hasNext()) {
+            Car car = iterator.next();
             found = true;
-            System.out.println(iterator.next());
+            if (car.isSold()) {
+                System.out.println(car + "\nStatus: SOLD");
+            } else {
+                System.out.println(car + "\nStatus: AVAILABLE");
+            }
         }
         if (!found) {
             System.out.println("No cars found for the given criteria.");
@@ -286,6 +296,7 @@ public class Main {
 
         balanceManager.addMoney("KZT", -carToBuy.getPrice()); // Списание денег
         account.addCar(carToBuy); // Добавляем машину в аккаунт
+        carToBuy.setSold(true); // Изменяем статус на "продано"
         System.out.println("Successfully purchased the car: " + carToBuy);
     }
 

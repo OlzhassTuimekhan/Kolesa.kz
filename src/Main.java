@@ -11,7 +11,7 @@ public class Main {
         Account account = new Account(balanceManager); // Создаем аккаунт
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Car Management System!");
-
+        //
         while (true) {
             try {
                 System.out.println("\nMenu:");

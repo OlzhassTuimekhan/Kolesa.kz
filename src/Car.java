@@ -103,7 +103,7 @@ class Car {
                 "Engine Volume : " + engineVolume + "L\n" +
                 "Gearbox Type  : " + gearboxType + "\n" +
                 "Description   : " + description + "\n" +
-                "Price         : $" + price + "\n" +
+                "Price         : " + String.format("%,.0f", price) + " KZT\n" +
                 "Seller Phone  : " + sellerPhone + "\n" +
                 "Sold Status   : " + (isSold ? "Sold" : "Available") + "\n" +
                 "VIN Code      : " + vinCode + "\n" +

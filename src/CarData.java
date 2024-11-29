@@ -11,8 +11,8 @@ public class CarData {
                 .engineVolume(2.0)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(10500)
-                .sellerPhone("+123456789")
+                .price(5145000)
+                .sellerPhone("+7071000000")
                 .vinCode("VIN000001")
                 .build());
 
@@ -23,8 +23,8 @@ public class CarData {
                 .engineVolume(2.5)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(11000)
-                .sellerPhone("+123456789")
+                .price(5390000)
+                .sellerPhone("+7071000001")
                 .vinCode("VIN000002")
                 .build());
 
@@ -35,8 +35,8 @@ public class CarData {
                 .engineVolume(1.5)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(11500)
-                .sellerPhone("+123456789")
+                .price(5635000)
+                .sellerPhone("+7071000002")
                 .vinCode("VIN000003")
                 .build());
 
@@ -47,8 +47,8 @@ public class CarData {
                 .engineVolume(2.0)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(12000)
-                .sellerPhone("+123456789")
+                .price(5880000)
+                .sellerPhone("+7071000003")
                 .vinCode("VIN000004")
                 .build());
 
@@ -59,8 +59,8 @@ public class CarData {
                 .engineVolume(2.5)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(12500)
-                .sellerPhone("+123456789")
+                .price(6125000)
+                .sellerPhone("+7071000004")
                 .vinCode("VIN000005")
                 .build());
 
@@ -71,8 +71,8 @@ public class CarData {
                 .engineVolume(1.5)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(13000)
-                .sellerPhone("+123456789")
+                .price(6370000)
+                .sellerPhone("+7071000005")
                 .vinCode("VIN000006")
                 .build());
 
@@ -83,8 +83,8 @@ public class CarData {
                 .engineVolume(2.0)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(13500)
-                .sellerPhone("+123456789")
+                .price(6615000)
+                .sellerPhone("+7071000006")
                 .vinCode("VIN000007")
                 .build());
 
@@ -95,8 +95,8 @@ public class CarData {
                 .engineVolume(2.5)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(14000)
-                .sellerPhone("+123456789")
+                .price(6860000)
+                .sellerPhone("+7071000007")
                 .vinCode("VIN000008")
                 .build());
 
@@ -107,8 +107,8 @@ public class CarData {
                 .engineVolume(1.5)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(14500)
-                .sellerPhone("+123456789")
+                .price(7105000)
+                .sellerPhone("+7071000008")
                 .vinCode("VIN000009")
                 .build());
 
@@ -119,8 +119,8 @@ public class CarData {
                 .engineVolume(2.0)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(15000)
-                .sellerPhone("+123456789")
+                .price(7350000)
+                .sellerPhone("+7071000009")
                 .vinCode("VIN000010")
                 .build());
 
@@ -131,8 +131,8 @@ public class CarData {
                 .engineVolume(2.5)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(15500)
-                .sellerPhone("+123456789")
+                .price(7595000)
+                .sellerPhone("+7071000010")
                 .vinCode("VIN000011")
                 .build());
 
@@ -143,8 +143,8 @@ public class CarData {
                 .engineVolume(1.5)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(16000)
-                .sellerPhone("+123456789")
+                .price(7840000)
+                .sellerPhone("+7071000011")
                 .vinCode("VIN000012")
                 .build());
 
@@ -155,8 +155,8 @@ public class CarData {
                 .engineVolume(2.0)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(16500)
-                .sellerPhone("+123456789")
+                .price(8085000)
+                .sellerPhone("+7071000012")
                 .vinCode("VIN000013")
                 .build());
 
@@ -167,8 +167,8 @@ public class CarData {
                 .engineVolume(2.5)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(17000)
-                .sellerPhone("+123456789")
+                .price(8330000)
+                .sellerPhone("+7071000013")
                 .vinCode("VIN000014")
                 .build());
 
@@ -179,8 +179,8 @@ public class CarData {
                 .engineVolume(1.5)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(17500)
-                .sellerPhone("+123456789")
+                .price(8575000)
+                .sellerPhone("+7071000014")
                 .vinCode("VIN000015")
                 .build());
 
@@ -191,8 +191,8 @@ public class CarData {
                 .engineVolume(2.0)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(18000)
-                .sellerPhone("+123456789")
+                .price(8820000)
+                .sellerPhone("+7071000015")
                 .vinCode("VIN000016")
                 .build());
 
@@ -203,8 +203,8 @@ public class CarData {
                 .engineVolume(2.5)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(18500)
-                .sellerPhone("+123456789")
+                .price(9065000)
+                .sellerPhone("+7071000016")
                 .vinCode("VIN000017")
                 .build());
 
@@ -215,8 +215,8 @@ public class CarData {
                 .engineVolume(1.5)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(19000)
-                .sellerPhone("+123456789")
+                .price(9310000)
+                .sellerPhone("+7071000017")
                 .vinCode("VIN000018")
                 .build());
 
@@ -227,8 +227,8 @@ public class CarData {
                 .engineVolume(2.0)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(19500)
-                .sellerPhone("+123456789")
+                .price(9555000)
+                .sellerPhone("+7071000018")
                 .vinCode("VIN000019")
                 .build());
 
@@ -239,8 +239,8 @@ public class CarData {
                 .engineVolume(2.5)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(20000)
-                .sellerPhone("+123456789")
+                .price(9800000)
+                .sellerPhone("+7071000019")
                 .vinCode("VIN000020")
                 .build());
 
@@ -251,8 +251,8 @@ public class CarData {
                 .engineVolume(1.5)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(20500)
-                .sellerPhone("+123456789")
+                .price(10045000)
+                .sellerPhone("+7071000020")
                 .vinCode("VIN000021")
                 .build());
 
@@ -263,8 +263,8 @@ public class CarData {
                 .engineVolume(2.0)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(21000)
-                .sellerPhone("+123456789")
+                .price(10290000)
+                .sellerPhone("+7071000021")
                 .vinCode("VIN000022")
                 .build());
 
@@ -275,8 +275,8 @@ public class CarData {
                 .engineVolume(2.5)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(21500)
-                .sellerPhone("+123456789")
+                .price(10535000)
+                .sellerPhone("+7071000022")
                 .vinCode("VIN000023")
                 .build());
 
@@ -287,8 +287,8 @@ public class CarData {
                 .engineVolume(1.5)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(22000)
-                .sellerPhone("+123456789")
+                .price(10780000)
+                .sellerPhone("+7071000023")
                 .vinCode("VIN000024")
                 .build());
 
@@ -299,8 +299,8 @@ public class CarData {
                 .engineVolume(2.0)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(22500)
-                .sellerPhone("+123456789")
+                .price(11025000)
+                .sellerPhone("+7071000024")
                 .vinCode("VIN000025")
                 .build());
 
@@ -311,8 +311,8 @@ public class CarData {
                 .engineVolume(2.5)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(23000)
-                .sellerPhone("+123456789")
+                .price(11270000)
+                .sellerPhone("+7071000025")
                 .vinCode("VIN000026")
                 .build());
 
@@ -323,8 +323,8 @@ public class CarData {
                 .engineVolume(1.5)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(23500)
-                .sellerPhone("+123456789")
+                .price(11515000)
+                .sellerPhone("+7071000026")
                 .vinCode("VIN000027")
                 .build());
 
@@ -335,8 +335,8 @@ public class CarData {
                 .engineVolume(2.0)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(24000)
-                .sellerPhone("+123456789")
+                .price(11760000)
+                .sellerPhone("+7071000027")
                 .vinCode("VIN000028")
                 .build());
 
@@ -347,8 +347,8 @@ public class CarData {
                 .engineVolume(2.5)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(24500)
-                .sellerPhone("+123456789")
+                .price(12005000)
+                .sellerPhone("+7071000028")
                 .vinCode("VIN000029")
                 .build());
 
@@ -359,8 +359,8 @@ public class CarData {
                 .engineVolume(1.5)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(25000)
-                .sellerPhone("+123456789")
+                .price(12250000)
+                .sellerPhone("+7071000029")
                 .vinCode("VIN000030")
                 .build());
 
@@ -371,8 +371,8 @@ public class CarData {
                 .engineVolume(2.0)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(25500)
-                .sellerPhone("+123456789")
+                .price(12495000)
+                .sellerPhone("+7071000030")
                 .vinCode("VIN000031")
                 .build());
 
@@ -383,8 +383,8 @@ public class CarData {
                 .engineVolume(2.5)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(26000)
-                .sellerPhone("+123456789")
+                .price(12740000)
+                .sellerPhone("+7071000031")
                 .vinCode("VIN000032")
                 .build());
 
@@ -395,8 +395,8 @@ public class CarData {
                 .engineVolume(1.5)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(26500)
-                .sellerPhone("+123456789")
+                .price(12985000)
+                .sellerPhone("+7071000032")
                 .vinCode("VIN000033")
                 .build());
 
@@ -407,8 +407,8 @@ public class CarData {
                 .engineVolume(2.0)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(27000)
-                .sellerPhone("+123456789")
+                .price(13230000)
+                .sellerPhone("+7071000033")
                 .vinCode("VIN000034")
                 .build());
 
@@ -419,8 +419,8 @@ public class CarData {
                 .engineVolume(2.5)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(27500)
-                .sellerPhone("+123456789")
+                .price(13475000)
+                .sellerPhone("+7071000034")
                 .vinCode("VIN000035")
                 .build());
 
@@ -431,8 +431,8 @@ public class CarData {
                 .engineVolume(1.5)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(28000)
-                .sellerPhone("+123456789")
+                .price(13720000)
+                .sellerPhone("+7071000035")
                 .vinCode("VIN000036")
                 .build());
 
@@ -443,8 +443,8 @@ public class CarData {
                 .engineVolume(2.0)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(28500)
-                .sellerPhone("+123456789")
+                .price(13965000)
+                .sellerPhone("+7071000036")
                 .vinCode("VIN000037")
                 .build());
 
@@ -455,8 +455,8 @@ public class CarData {
                 .engineVolume(2.5)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(29000)
-                .sellerPhone("+123456789")
+                .price(14210000)
+                .sellerPhone("+7071000037")
                 .vinCode("VIN000038")
                 .build());
 
@@ -467,8 +467,8 @@ public class CarData {
                 .engineVolume(1.5)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(29500)
-                .sellerPhone("+123456789")
+                .price(14455000)
+                .sellerPhone("+7071000038")
                 .vinCode("VIN000039")
                 .build());
 
@@ -479,8 +479,8 @@ public class CarData {
                 .engineVolume(2.0)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(30000)
-                .sellerPhone("+123456789")
+                .price(14700000)
+                .sellerPhone("+7071000039")
                 .vinCode("VIN000040")
                 .build());
 
@@ -491,8 +491,8 @@ public class CarData {
                 .engineVolume(2.5)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(30500)
-                .sellerPhone("+123456789")
+                .price(14945000)
+                .sellerPhone("+7071000040")
                 .vinCode("VIN000041")
                 .build());
 
@@ -503,8 +503,8 @@ public class CarData {
                 .engineVolume(1.5)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(31000)
-                .sellerPhone("+123456789")
+                .price(15190000)
+                .sellerPhone("+7071000041")
                 .vinCode("VIN000042")
                 .build());
 
@@ -515,8 +515,8 @@ public class CarData {
                 .engineVolume(2.0)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(31500)
-                .sellerPhone("+123456789")
+                .price(15435000)
+                .sellerPhone("+7071000042")
                 .vinCode("VIN000043")
                 .build());
 
@@ -527,8 +527,8 @@ public class CarData {
                 .engineVolume(2.5)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(32000)
-                .sellerPhone("+123456789")
+                .price(15680000)
+                .sellerPhone("+7071000043")
                 .vinCode("VIN000044")
                 .build());
 
@@ -539,8 +539,8 @@ public class CarData {
                 .engineVolume(1.5)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(32500)
-                .sellerPhone("+123456789")
+                .price(15925000)
+                .sellerPhone("+7071000044")
                 .vinCode("VIN000045")
                 .build());
 
@@ -551,8 +551,8 @@ public class CarData {
                 .engineVolume(2.0)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(33000)
-                .sellerPhone("+123456789")
+                .price(16170000)
+                .sellerPhone("+7071000045")
                 .vinCode("VIN000046")
                 .build());
 
@@ -563,8 +563,8 @@ public class CarData {
                 .engineVolume(2.5)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(33500)
-                .sellerPhone("+123456789")
+                .price(16415000)
+                .sellerPhone("+7071000046")
                 .vinCode("VIN000047")
                 .build());
 
@@ -575,8 +575,8 @@ public class CarData {
                 .engineVolume(1.5)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(34000)
-                .sellerPhone("+123456789")
+                .price(16660000)
+                .sellerPhone("+7071000047")
                 .vinCode("VIN000048")
                 .build());
 
@@ -587,8 +587,8 @@ public class CarData {
                 .engineVolume(2.0)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(34500)
-                .sellerPhone("+123456789")
+                .price(16905000)
+                .sellerPhone("+7071000048")
                 .vinCode("VIN000049")
                 .build());
 
@@ -599,8 +599,8 @@ public class CarData {
                 .engineVolume(2.5)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(35000)
-                .sellerPhone("+123456789")
+                .price(17150000)
+                .sellerPhone("+7071000049")
                 .vinCode("VIN000050")
                 .build());
 
@@ -611,8 +611,8 @@ public class CarData {
                 .engineVolume(1.5)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(35500)
-                .sellerPhone("+123456789")
+                .price(17395000)
+                .sellerPhone("+7071000050")
                 .vinCode("VIN000051")
                 .build());
 
@@ -623,8 +623,8 @@ public class CarData {
                 .engineVolume(2.0)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(36000)
-                .sellerPhone("+123456789")
+                .price(17640000)
+                .sellerPhone("+7071000051")
                 .vinCode("VIN000052")
                 .build());
 
@@ -635,8 +635,8 @@ public class CarData {
                 .engineVolume(2.5)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(36500)
-                .sellerPhone("+123456789")
+                .price(17885000)
+                .sellerPhone("+7071000052")
                 .vinCode("VIN000053")
                 .build());
 
@@ -647,8 +647,8 @@ public class CarData {
                 .engineVolume(1.5)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(37000)
-                .sellerPhone("+123456789")
+                .price(18130000)
+                .sellerPhone("+7071000053")
                 .vinCode("VIN000054")
                 .build());
 
@@ -659,8 +659,8 @@ public class CarData {
                 .engineVolume(2.0)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(37500)
-                .sellerPhone("+123456789")
+                .price(18375000)
+                .sellerPhone("+7071000054")
                 .vinCode("VIN000055")
                 .build());
 
@@ -671,8 +671,8 @@ public class CarData {
                 .engineVolume(2.5)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(38000)
-                .sellerPhone("+123456789")
+                .price(18620000)
+                .sellerPhone("+7071000055")
                 .vinCode("VIN000056")
                 .build());
 
@@ -683,8 +683,8 @@ public class CarData {
                 .engineVolume(1.5)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(38500)
-                .sellerPhone("+123456789")
+                .price(18865000)
+                .sellerPhone("+7071000056")
                 .vinCode("VIN000057")
                 .build());
 
@@ -695,8 +695,8 @@ public class CarData {
                 .engineVolume(2.0)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(39000)
-                .sellerPhone("+123456789")
+                .price(19110000)
+                .sellerPhone("+7071000057")
                 .vinCode("VIN000058")
                 .build());
 
@@ -707,8 +707,8 @@ public class CarData {
                 .engineVolume(2.5)
                 .gearboxType("Manual")
                 .description("Fuel-efficient and reliable")
-                .price(39500)
-                .sellerPhone("+123456789")
+                .price(19355000)
+                .sellerPhone("+7071000058")
                 .vinCode("VIN000059")
                 .build());
 
@@ -719,8 +719,8 @@ public class CarData {
                 .engineVolume(1.5)
                 .gearboxType("Automatic")
                 .description("Spacious and powerful")
-                .price(40000)
-                .sellerPhone("+123456789")
+                .price(19600000)
+                .sellerPhone("+7071000059")
                 .vinCode("VIN000060")
                 .build());
         return cars;

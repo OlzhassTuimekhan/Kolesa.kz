@@ -3,7 +3,7 @@ import java.net.*;
 
 public class ChatClient {
     public static void main(String[] args) {
-        try (Socket socket = new Socket("192.168.64.2", 8888)) { // Подключение к серверу
+        try (Socket socket = new Socket("192.168.0.113", 8888)) { // Подключение к серверу
             System.out.println("Connected to the server.");
             new Thread(new ReadTask(socket)).start(); // Поток для чтения сообщений от сервера
 
@@ -11,7 +11,7 @@ public class ChatClient {
             BufferedReader consoleReader = new BufferedReader(new InputStreamReader(System.in));
             String message;
             while ((message = consoleReader.readLine()) != null) {
-                writer.println(message); // Отправляем сообщение серверу
+                writer.println(message);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -38,3 +38,4 @@ class ReadTask implements Runnable {
         }
     }
 }
+

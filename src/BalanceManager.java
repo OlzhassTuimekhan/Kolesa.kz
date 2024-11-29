@@ -30,20 +30,24 @@ public class BalanceManager {
     }
 
     // Добавление денег
+    // Добавление денег с поддержкой списания
     public void addMoney(String currency, double amount) {
-        if (!isCardLinked()) { // Проверка, привязана ли карта
-            System.out.println("You must link a card before adding money.");
+        if (amount == 0) {
+            System.out.println("Amount must be non-zero.");
             return;
         }
-        if (amount <= 0) {
-            System.out.println("Amount must be greater than zero.");
+
+        if (amount < 0 && Math.abs(amount) > balanceInKZT) { // Проверка на отрицательное значение и достаточный баланс
+            System.out.println("Insufficient funds for this operation.");
             return;
         }
+
         try {
             double amountInKZT = currencyConverter.convertToKZT(currency, amount);
             balanceInKZT += amountInKZT;
-            transactions.add("Added: " + amount + " " + currency + " (converted to " + amountInKZT + " KZT)");
-            System.out.println("Added " + amount + " " + currency + " (converted to " + amountInKZT + " KZT) to your balance.");
+            String transactionType = amount > 0 ? "Added: " : "Deducted: ";
+            transactions.add(transactionType + Math.abs(amount) + " " + currency + " (converted to " + amountInKZT + " KZT)");
+            System.out.println(transactionType + Math.abs(amount) + " " + currency + " (converted to " + amountInKZT + " KZT).");
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
@@ -53,6 +57,12 @@ public class BalanceManager {
     public void showBalance() {
         System.out.println("\nCurrent Balance in KZT: " + balanceInKZT);
     }
+
+    public double getBalanceInKZT() {
+        return balanceInKZT;
+    }
+
+
 
     // Проверка привязанной карты
     public void checkLinkedCard() {

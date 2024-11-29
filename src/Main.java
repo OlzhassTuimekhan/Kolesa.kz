@@ -8,7 +8,8 @@ public class Main {
         List<Car> cars = CarData.getPredefinedCars();
         CurrencyConverter currencyAdapter = new CurrencyAdapter();
         BalanceManager balanceManager = new BalanceManager(currencyAdapter);
-        Account account = new Account(balanceManager); // Создаем аккаунт
+        Account account = new Account(balanceManager);
+        CarPurchaseCaretaker caretaker = new CarPurchaseCaretaker();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Car Management System!");
         //
@@ -23,7 +24,8 @@ public class Main {
                 System.out.println("6. Link card");
                 System.out.println("7. Show my transactions");
                 System.out.println("8. Buy Car");
-                System.out.println("9. Exit");
+                System.out.println("9. Undo Last Purchase");
+                System.out.println("10. Exit");
                 System.out.print("Choose an option: ");
 
                 int choice = scanner.nextInt();
@@ -79,9 +81,12 @@ public class Main {
                         balanceManager.showTransactions();
                         break;
                     case 8:
-                        buyCarMenu(scanner, cars, account, balanceManager);
+                        buyCarMenu(scanner, cars, account, balanceManager, caretaker);
                         break;
                     case 9:
+                        undoPurchaseMenu(account, caretaker);
+                        break;
+                    case 10:
                         System.out.println("Exiting. Goodbye!");
                         return;
                     default:
@@ -196,11 +201,8 @@ public class Main {
 
     private static void addCar(Scanner scanner, List<Car> cars) {
         System.out.println("\nAdd a New Car");
-
+        int id = 61;
         try {
-            System.out.print("Enter Car ID: ");
-            int id = scanner.nextInt();
-            scanner.nextLine(); // Clear buffer
 
             System.out.print("Enter Brand: ");
             String brand = scanner.nextLine();
@@ -249,7 +251,7 @@ public class Main {
                     .sellerPhone(sellerPhone)
                     .vinCode(vinCode)
                     .build();
-
+            id++;
             cars.add(newCar);
 
             System.out.println("\nYour ad has been successfully added");
@@ -259,7 +261,7 @@ public class Main {
         }
     }
 
-    private static void buyCarMenu(Scanner scanner, List<Car> cars, Account account, BalanceManager balanceManager) {
+    private static void buyCarMenu(Scanner scanner, List<Car> cars, Account account, BalanceManager balanceManager, CarPurchaseCaretaker caretaker) {
         System.out.print("Enter VINCODE of the car you want to buy: ");
         String vin = scanner.nextLine();
 
@@ -273,13 +275,27 @@ public class Main {
             return;
         }
 
-        if (carToBuy.getPrice() > balanceManager.getBalanceInKZT()) { // Проверка баланса
+        if (carToBuy.getPrice() > balanceManager.getBalanceInKZT()) {
             System.out.println("Insufficient funds to buy this car.");
             return;
         }
+
+        // Сохранить состояние перед покупкой
+        caretaker.saveState(account.saveState());
 
         balanceManager.addMoney("KZT", -carToBuy.getPrice()); // Списание денег
         account.addCar(carToBuy); // Добавляем машину в аккаунт
         System.out.println("Successfully purchased the car: " + carToBuy);
     }
+
+    private static void undoPurchaseMenu(Account account, CarPurchaseCaretaker caretaker) {
+        if (!caretaker.hasUndo()) {
+            System.out.println("No purchase to undo.");
+            return;
+        }
+        account.restoreState(caretaker.undoState());
+        System.out.println("Purchase successfully undone.");
+    }
+
+
 }

@@ -62,6 +62,10 @@ public class BalanceManager {
         return balanceInKZT;
     }
 
+    public void setBalanceInKZT(double balanceInKZT) {
+        this.balanceInKZT = balanceInKZT;
+    }
+
 
 
     // Проверка привязанной карты

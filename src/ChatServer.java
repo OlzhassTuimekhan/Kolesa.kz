@@ -3,23 +3,28 @@ import java.net.*;
 import java.util.*;
 
 public class ChatServer implements Subject {
-    private final List<Observer> observers = new ArrayList<>(); // Список наблюдателей
+    private final List<Observer> observers = new ArrayList<>();
+    private static ChatServer instance; // Единственный экземпляр сервера
 
-    public static void main(String[] args) {
-        ChatServer server = new ChatServer();
-        new Thread(server::startServer).start(); // Запускаем сервер в отдельном потоке
-        new Admin(server).start(); // Запускаем администратора
+    private ChatServer() {}
+
+    // Метод для получения единственного экземпляра
+    public static synchronized ChatServer getInstance() {
+        if (instance == null) {
+            instance = new ChatServer();
+        }
+        return instance;
     }
 
     public void startServer() {
-        try (ServerSocket serverSocket = new ServerSocket(8888)) { // Порт 12345
+        try (ServerSocket serverSocket = new ServerSocket(8888)) { // Используем порт 8888
             System.out.println("Server started. Waiting for clients...");
             while (true) {
                 Socket clientSocket = serverSocket.accept();
-                System.out.println("New client connected.");
+                System.out.println("\nServer: New client connected.");
                 ClientHandler clientHandler = new ClientHandler(clientSocket, this);
                 addObserver(clientHandler); // Добавляем клиента как наблюдателя
-                new Thread(clientHandler).start(); // Запускаем поток для обработки клиента
+                new Thread(clientHandler).start(); // Обрабатываем клиента в отдельном потоке
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -45,9 +50,7 @@ public class ChatServer implements Subject {
         }
     }
 
-    // Отправка сообщения от администратора
     public void broadcastMessageFromAdmin(String message) {
-        System.out.println("Admin: " + message); // Логируем сообщение от администратора
         notifyObservers("[ADMIN]: " + message); // Уведомляем всех наблюдателей
     }
 }

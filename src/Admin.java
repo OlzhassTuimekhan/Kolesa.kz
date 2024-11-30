@@ -15,6 +15,7 @@ public class Admin {
             String message = scanner.nextLine();
             if (message.equalsIgnoreCase("exit")) {
                 System.out.println("Admin console closed.");
+                System.exit(0);
                 break;
             }
             server.broadcastMessageFromAdmin(message); // Отправляем сообщение всем клиентам

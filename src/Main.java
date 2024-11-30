@@ -3,14 +3,21 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-//// medet
+
+
     public static void main(String[] args) {
-        List<Car> cars = CarData.getPredefinedCars();
+        //PROXY
+        CarDataProxy carDataProxy = new CarDataProxy();
+        List<Car> cars = carDataProxy.getPredefinedCars();
+
         CurrencyConverter currencyAdapter = new CurrencyAdapter();
         BalanceManager balanceManager = new BalanceManager(currencyAdapter);
         Account account = new Account(balanceManager); // Создаем аккаунт
         CarPurchaseCaretaker caretaker = new CarPurchaseCaretaker();
         LicensePlateGenerator generator = new LicensePlateGenerator(new StandardLicensePlateStrategy());
+        ChatServer chatServer = ChatServer.getInstance();
+        new Thread(chatServer::startServer).start();
+
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Car Management System!");
@@ -45,7 +52,7 @@ public class Main {
                         showCarsMenu(scanner, cars);
                         break;
                     case 2:
-                        addCar(scanner, cars);
+                        addCar(scanner, cars, chatServer);
                         break;
                     case 3:
                         licensePlate(scanner, generator, account);
@@ -196,7 +203,7 @@ public class Main {
         balanceManager.linkCard(cardNumber);
     }
 
-    private static void addCar(Scanner scanner, List<Car> cars) {
+    private static void addCar(Scanner scanner, List<Car> cars, ChatServer chatServer) {
         System.out.println("\nAdd a New Car");
         int id = 61;
         try {
@@ -250,6 +257,7 @@ public class Main {
                     .build();
             id++;
             cars.add(newCar);
+            chatServer.broadcastMessageFromAdmin("A new car has been added.\n" + newCar.getBrand() + " " + newCar.getModel() + ", " + newCar.getYear());
 
             System.out.println("\nYour ad has been successfully added");
         } catch (InputMismatchException e) {

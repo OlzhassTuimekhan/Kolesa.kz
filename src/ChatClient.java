@@ -3,7 +3,7 @@ import java.net.*;
 
 public class ChatClient {
     public static void main(String[] args) {
-        try (Socket socket = new Socket("10.48.147.23", 8888)) { // Подключение к серверу
+        try (Socket socket = new Socket("localhost", 8888)) { // Подключение к серверу
             System.out.println("Connected to the server.");
             new Thread(new ReadTask(socket)).start(); // Поток для чтения сообщений от сервера
 

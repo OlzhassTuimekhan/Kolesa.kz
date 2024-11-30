@@ -14,27 +14,29 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Car Management System!");
-        //
+
         while (true) {
             try {
-                System.out.println("\nMenu:");
-                System.out.println("1. Show cars");
-                System.out.println("2. Add cars for selling");
-                System.out.println("3. Generate a license plate");
-                System.out.println("4. Show my account");
-                System.out.println("5. Add money");
-                System.out.println("6. Link card");
-                System.out.println("7. Show my transactions");
-                System.out.println("8. Buy Car");
-                System.out.println("9. Undo Last Purchase");
-                System.out.println("10. Exit");
-                System.out.print("Choose an option: ");
+                System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+                System.out.println("▐ Menu:                              ▐");
+                System.out.println("▐ 1. Show cars                       ▐");
+                System.out.println("▐ 2. Add Car                         ▐");
+                System.out.println("▐ 3. Generate a license plate        ▐");
+                System.out.println("▐ 4. My Account                      ▐");
+                System.out.println("▐ 5. Add money                       ▐");
+                System.out.println("▐ 6. Link card                       ▐");
+                System.out.println("▐ 7. Show my transactions            ▐");
+                System.out.println("▐ 8. Buy Car                         ▐");
+                System.out.println("▐ 9. Undo Last Purchase              ▐");
+                System.out.println("▐ 10. Exit                           ▐");
+                System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+                System.out.print(" Choose an option: ");
 
                 int choice = scanner.nextInt();
-                System.out.println("----------------------------------------\n");
+
                 scanner.nextLine(); // Clear buffer
 
-                if (choice < 1 || choice > 9) {
+                if (choice < 1 || choice > 10) {
                     throw new IllegalArgumentException("Invalid menu option. Please choose a number between 1 and 9.");
                 }
 
@@ -46,33 +48,7 @@ public class Main {
                         addCar(scanner, cars);
                         break;
                     case 3:
-                        System.out.println("Choose license plate generation strategy:");
-                        System.out.println("1. Standard");
-                        System.out.println("2. Regional");
-                        int strategyChoice = scanner.nextInt();
-                        scanner.nextLine(); // Очистка буфера
-
-                        LicensePlateStrategy strategy;
-                        if (strategyChoice == 1) {
-                            strategy = new StandardLicensePlateStrategy();
-                        } else if (strategyChoice == 2) {
-                            System.out.print("Enter region code (e.g., 18): ");
-                            String region = scanner.nextLine();
-                            strategy = new RegionalLicensePlateStrategy(region);
-                        } else {
-                            System.out.println("Invalid choice. Using default strategy.");
-                            strategy = new StandardLicensePlateStrategy();
-                        }
-
-                        // Установить стратегию генерации
-                        generator.setStrategy(strategy);
-
-                        System.out.print("Enter VIN Code of your owned car to generate license plate: ");
-                        String vinCode = scanner.nextLine();
-
-                        // Генерация и привязка номера к машине пользователя
-                        String result = generator.assignLicensePlateToOwnedCar(vinCode, account);
-                        System.out.println(result);
+                        licensePlate(scanner, generator, account);
                         break;
                     case 4:
                         account.showAccountDetails(); // Показать аккаунт
@@ -93,14 +69,12 @@ public class Main {
                         undoPurchaseMenu(account, caretaker);
                         break;
                     case 10:
-                        System.out.println("Exiting. Goodbye!");
-                        return;
-                    default:
-                        System.out.println("Unexpected error.");
+                        System.out.println("Good Bye!");
+                        System.exit(0);
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Invalid input. Please enter a number between 1 and 9.");
-                scanner.nextLine(); // Clear buffer to avoid infinite loop
+                scanner.nextLine();
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
@@ -111,25 +85,37 @@ public class Main {
         try {
             boolean sh = true;
             while (sh) {
-                System.out.println("\nCar Search:");
-                System.out.println("1. Search by Brand");
-                System.out.println("2. Search by Year");
-                System.out.println("3. Search by Price");
-                System.out.println("4. Search by VINCODE ");
-                System.out.println("5. Go to Previous Menu.");
+                System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+                System.out.println("Car Search:");
+                System.out.println("1. Show all cars ");
+                System.out.println("2. Search by Brand");
+                System.out.println("3. Search by Year");
+                System.out.println("4. Search by Price");
+                System.out.println("5. Search by VINCODE ");
+                System.out.println("6. Go to Previous Menu.");
+                System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
                 System.out.print("Choose an option: ");
                 int choice = scanner.nextInt();
                 scanner.nextLine();
 
                 switch (choice) {
                     case 1:
+                        if(cars.isEmpty()) {
+                            System.out.println("No cars found.");
+                        } else {
+                            for (Car car : cars) {
+                                System.out.println(car.toString());
+                            }
+                        }
+                        break;
+                    case 2:
                         System.out.print("\nEnter brand: ");
                         String brand = scanner.nextLine();
                         CarIterator brandIterator = new FilteredCarIterator(cars, car -> car.getBrand().equalsIgnoreCase(brand));
                         displayResults(brandIterator);
                         break;
 
-                    case 2:
+                    case 3:
                         System.out.print("\nEnter year: ");
                         int year = scanner.nextInt();
                         scanner.nextLine();
@@ -137,7 +123,7 @@ public class Main {
                         displayResults(yearIterator);
                         break;
 
-                    case 3:
+                    case 4:
                         System.out.print("\nEnter minimum price: ");
                         double minPrice = scanner.nextDouble();
                         System.out.print("Enter maximum price: ");
@@ -147,13 +133,13 @@ public class Main {
                         displayResults(priceIterator);
                         break;
 
-                    case 4:
+                    case 5:
                         System.out.print("\nEnter VINCODE: ");
                         String vin = scanner.nextLine();
                         CarIterator vinIterator = new FilteredCarIterator(cars, car -> car.getVinCode().equalsIgnoreCase(vin));
                         displayResults(vinIterator);
                         break;
-                    case 5:
+                    case 6:
                         sh = false;
                         break;
                     default:
@@ -297,7 +283,7 @@ public class Main {
         balanceManager.addMoney("KZT", -carToBuy.getPrice()); // Списание денег
         account.addCar(carToBuy); // Добавляем машину в аккаунт
         carToBuy.setSold(true); // Изменяем статус на "продано"
-        System.out.println("Successfully purchased the car: " + carToBuy);
+        System.out.println("Successfully purchased the car: \n" + carToBuy);
     }
 
     private static void undoPurchaseMenu(Account account, CarPurchaseCaretaker caretaker) {
@@ -307,6 +293,35 @@ public class Main {
         }
         account.restoreState(caretaker.undoState());
         System.out.println("Purchase successfully undone.");
+    }
+    public static void licensePlate(Scanner scanner, LicensePlateGenerator generator, Account account) {
+        System.out.println("Choose license plate generation strategy:");
+        System.out.println("1. Standard");
+        System.out.println("2. Regional");
+        int strategyChoice = scanner.nextInt();
+        scanner.nextLine(); // Очистка буфера
+
+        LicensePlateStrategy strategy;
+        if (strategyChoice == 1) {
+            strategy = new StandardLicensePlateStrategy();
+        } else if (strategyChoice == 2) {
+            System.out.print("Enter region code (e.g., 18): ");
+            String region = scanner.nextLine();
+            strategy = new RegionalLicensePlateStrategy(region);
+        } else {
+            System.out.println("Invalid choice. Using default strategy.");
+            strategy = new StandardLicensePlateStrategy();
+        }
+
+        // Установить стратегию генерации
+        generator.setStrategy(strategy);
+
+        System.out.print("Enter VIN Code of your owned car to generate license plate: ");
+        String vinCode = scanner.nextLine();
+
+        // Генерация и привязка номера к машине пользователя
+        String result = generator.assignLicensePlateToOwnedCar(vinCode, account);
+        System.out.println(result);
     }
 
 

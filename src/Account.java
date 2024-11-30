@@ -1,12 +1,23 @@
 import java.util.List;
 import java.util.ArrayList;
+
 public class Account {
+    private static Account instance; // Единственный экземпляр
     private final BalanceManager balanceManager; // Управление балансом
     private final List<Car> ownedCars; // Список приобретённых машин
 
-    public Account(BalanceManager balanceManager) {
+    // Приватный конструктор для предотвращения создания экземпляров извне
+    Account(BalanceManager balanceManager) {
         this.balanceManager = balanceManager;
         this.ownedCars = new ArrayList<>();
+    }
+
+    // Метод для получения единственного экземпляра
+    public static Account getInstance(BalanceManager balanceManager) {
+        if (instance == null) {
+            instance = new Account(balanceManager);
+        }
+        return instance;
     }
 
     // Добавить машину в список

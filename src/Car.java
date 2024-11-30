@@ -101,25 +101,38 @@ class Car {
         isSold = sold;
     }
 
+
     @Override
     public String toString() {
-        return "----------------------------------------\n" +
-                "Car ID        : " + id + "\n" +
-                "Brand         : " + brand + "\n" +
-                "Model         : " + model + "\n" +
-                "Year          : " + year + "\n" +
-                "Body Type     : " + bodyType + "\n" +
-                "Color         : " + color + "\n" +
-                "Engine Volume : " + engineVolume + "L\n" +
-                "Gearbox Type  : " + gearboxType + "\n" +
-                "Description   : " + description + "\n" +
-                "Price         : " + String.format("%,.0f", price) + " KZT\n" +
-                "Seller Phone  : " + sellerPhone + "\n" +
-                "Status        : " + (isSold ? "SOLD" : "AVAILABLE") + "\n"  +
-                "License Plate : " + (licensePlate != null ? licensePlate : "Not assigned") + "\n" +
-                "VIN Code      : " + vinCode + "\n" +
-                "----------------------------------------";
+        int width = 60; // Общая ширина рамки (включая границы)
+        String border = "━".repeat(width);
+
+        return border + "\n" +
+                formatRow("Car ID", id, width) +
+                formatRow("Brand", brand, width) +
+                formatRow("Model", model, width) +
+                formatRow("Year", year, width) +
+                formatRow("Body Type", bodyType, width) +
+                formatRow("Color", color, width) +
+                formatRow("Engine Volume", engineVolume + "L", width) +
+                formatRow("Gearbox Type", gearboxType, width) +
+                formatRow("Description", description, width) +
+                formatRow("Price", String.format("%,.0f KZT", price), width) +
+                formatRow("Seller Phone", sellerPhone, width) +
+                formatRow("Status", isSold ? "SOLD" : "AVAILABLE", width) +
+                formatRow("License Plate", licensePlate != null ? licensePlate : "Not assigned", width) +
+                formatRow("VIN Code", vinCode, width) +
+                border;
     }
+
+    // Вспомогательный метод для форматирования строки
+    private String formatRow(String key, Object value, int width) {
+        String content = String.format("▐ %-15s : %-"+(width - 20)+"s▐", key, value);
+        return content + "\n";
+    }
+
+
+
 
 
 

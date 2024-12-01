@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>/Users/olzhasstuimekhan/IdeaProjects/Kolesa.kz/src</OriginalElement>
+  <nodes>
+    <node x="-805.5" y="-320.5">Observer</node>
+    <node x="338.0" y="2454.5">RegionalLicensePlateStrategy</node>
+    <node x="496.0" y="2207.5">StandardLicensePlateStrategy</node>
+    <node x="376.0" y="1639.5">ChatClient</node>
+    <node x="-298.0" y="2170.5">FilteredCarIterator</node>
+    <node x="-552.5" y="2370.5">Account</node>
+    <node x="-845.5" y="-169.5">ClientHandler</node>
+    <node x="-1076.0" y="2763.5">Main</node>
+    <node x="-900.5" y="1079.5">CurrencyConverter</node>
+    <node x="-914.5" y="2182.5">CarPurchaseCaretaker</node>
+    <node x="-938.0" y="234.5">ChatServer</node>
+    <node x="-861.5" y="566.5">Admin</node>
+    <node x="-343.0" y="1627.5">CarIterator</node>
+    <node x="-1080.5" y="2466.5">CurrencyAdapter</node>
+    <node x="-141.5" y="2442.5">CarDataProxy</node>
+    <node x="-1086.0" y="35.5">Subject</node>
+    <node x="-844.0" y="1746.5">BalanceManager</node>
+    <node x="62.5" y="2170.5">LicensePlateGenerator</node>
+    <node x="-141.5" y="1879.5">CarData</node>
+    <node x="390.5" y="1066.5">ReadTask</node>
+    <node x="202.5" y="1879.5">LicensePlateStrategy</node>
+    <node x="-298.0" y="706.5">Car</node>
+    <node x="-513.0" y="1842.5">CarPurchaseMemento</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="FilteredCarIterator" target="CarIterator" relationship="REALIZATION">
+      <point x="-48.5" y="-80.5" />
+      <point x="-249.5" y="2131.0" />
+      <point x="-261.0" y="2131.0" />
+      <point x="0.0" y="43.5" />
+    </edge>
+    <edge source="Main" target="BalanceManager" relationship="CREATE">
+      <point x="0.0" y="-127.5" />
+      <point x="-841.0" y="2691.0" />
+      <point x="-581.0" y="2691.0" />
+      <point x="-581.0" y="2171.0" />
+      <point x="-772.5" y="2171.0" />
+      <point x="-71.5" y="164.5" />
+    </edge>
+    <edge source="ChatClient" target="ReadTask" relationship="CREATE">
+      <point x="0.0" y="-31.5" />
+      <point x="0.0" y="44.5" />
+    </edge>
+    <edge source="Main" target="RegionalLicensePlateStrategy" relationship="CREATE">
+      <point x="0.0" y="-127.5" />
+      <point x="-841.0" y="2691.0" />
+      <point x="479.0" y="2691.0" />
+      <point x="0.0" y="56.5" />
+    </edge>
+    <edge source="Main" target="LicensePlateGenerator" relationship="CREATE">
+      <point x="0.0" y="-127.5" />
+      <point x="-841.0" y="2691.0" />
+      <point x="259.0" y="2691.0" />
+      <point x="0.0" y="80.5" />
+    </edge>
+    <edge source="Main" target="CarDataProxy" relationship="CREATE">
+      <point x="0.0" y="-127.5" />
+      <point x="-841.0" y="2691.0" />
+      <point x="-21.0" y="2691.0" />
+      <point x="0.0" y="68.5" />
+    </edge>
+    <edge source="CarDataProxy" target="CarData" relationship="TO_ONE">
+      <point x="60.25" y="-68.5" />
+      <point x="39.25" y="2411.0" />
+      <point x="39.0" y="2411.0" />
+      <point x="39.0" y="2151.0" />
+      <point x="39.25" y="2151.0" />
+      <point x="60.25" y="31.5" />
+    </edge>
+    <edge source="BalanceManager" target="CurrencyConverter" relationship="TO_ONE">
+      <point x="0.0" y="-164.5" />
+      <point x="-701.0" y="1711.0" />
+      <point x="-691.25" y="1711.0" />
+      <point x="69.75" y="31.5" />
+    </edge>
+    <edge source="Main" target="Account" relationship="CREATE">
+      <point x="0.0" y="-127.5" />
+      <point x="-841.0" y="2691.0" />
+      <point x="-401.0" y="2691.0" />
+      <point x="0.0" y="140.5" />
+    </edge>
+    <edge source="FilteredCarIterator" target="Car" relationship="TO_MANY">
+      <point x="48.5" y="-80.5" />
+      <point x="-152.5" y="2131.0" />
+      <point x="-161.0" y="2131.0" />
+      <point x="0.0" y="404.5" />
+    </edge>
+    <edge source="Account" target="BalanceManager" relationship="TO_ONE">
+      <point x="-75.75" y="-140.5" />
+      <point x="-476.75" y="2331.0" />
+      <point x="-541.0" y="2331.0" />
+      <point x="-541.0" y="2151.0" />
+      <point x="-629.5" y="2151.0" />
+      <point x="71.5" y="164.5" />
+    </edge>
+    <edge source="ChatServer" target="Observer" relationship="TO_MANY">
+      <point x="117.75" y="-116.5" />
+      <point x="-663.25" y="211.0" />
+      <point x="-661.0" y="211.0" />
+      <point x="-661.0" y="-189.0" />
+      <point x="-678.75" y="-189.0" />
+      <point x="42.25" y="31.5" />
+    </edge>
+    <edge source="ClientHandler" target="ChatServer" relationship="TO_ONE">
+      <point x="42.25" y="80.5" />
+      <point x="-718.75" y="211.0" />
+      <point x="-741.75" y="211.0" />
+      <point x="39.25" y="-116.5" />
+    </edge>
+    <edge source="CurrencyAdapter" target="CurrencyConverter" relationship="REALIZATION">
+      <point x="0.0" y="-44.5" />
+      <point x="-941.0" y="2171.0" />
+      <point x="-861.0" y="2171.0" />
+      <point x="-861.0" y="1731.0" />
+      <point x="-830.75" y="1731.0" />
+      <point x="-69.75" y="31.5" />
+    </edge>
+    <edge source="Main" target="CurrencyAdapter" relationship="CREATE">
+      <point x="0.0" y="-127.5" />
+      <point x="-841.0" y="2691.0" />
+      <point x="-941.0" y="2691.0" />
+      <point x="0.0" y="44.5" />
+    </edge>
+    <edge source="Account" target="Car" relationship="TO_MANY">
+      <point x="-75.75" y="-140.5" />
+      <point x="-476.75" y="2331.0" />
+      <point x="-541.0" y="2331.0" />
+      <point x="-541.0" y="1611.0" />
+      <point x="-161.0" y="1611.0" />
+      <point x="0.0" y="404.5" />
+    </edge>
+    <edge source="StandardLicensePlateStrategy" target="LicensePlateStrategy" relationship="REALIZATION">
+      <point x="0.0" y="-43.5" />
+      <point x="639.0" y="2171.0" />
+      <point x="479.0" y="2171.0" />
+      <point x="479.0" y="1971.0" />
+      <point x="377.25" y="1971.0" />
+      <point x="58.25" y="31.5" />
+    </edge>
+    <edge source="ClientHandler" target="Observer" relationship="REALIZATION">
+      <point x="0.0" y="-80.5" />
+      <point x="-761.0" y="-209.0" />
+      <point x="-763.25" y="-209.0" />
+      <point x="-42.25" y="31.5" />
+    </edge>
+    <edge source="CarDataProxy" target="Car" relationship="TO_MANY">
+      <point x="60.25" y="-68.5" />
+      <point x="39.25" y="2411.0" />
+      <point x="39.0" y="2411.0" />
+      <point x="39.0" y="2151.0" />
+      <point x="119.0" y="2151.0" />
+      <point x="119.0" y="1611.0" />
+      <point x="-161.0" y="1611.0" />
+      <point x="0.0" y="404.5" />
+    </edge>
+    <edge source="Account" target="CarPurchaseMemento" relationship="CREATE">
+      <point x="75.75" y="-140.5" />
+      <point x="-325.25" y="2331.0" />
+      <point x="-401.0" y="2331.0" />
+      <point x="0.0" y="68.5" />
+    </edge>
+    <edge source="CarPurchaseMemento" target="Car" relationship="TO_MANY">
+      <point x="0.0" y="-68.5" />
+      <point x="-401.0" y="1611.0" />
+      <point x="-161.0" y="1611.0" />
+      <point x="0.0" y="404.5" />
+    </edge>
+    <edge source="Main" target="FilteredCarIterator" relationship="CREATE">
+      <point x="0.0" y="-127.5" />
+      <point x="-841.0" y="2691.0" />
+      <point x="-201.0" y="2691.0" />
+      <point x="0.0" y="80.5" />
+    </edge>
+    <edge source="ChatServer" target="ClientHandler" relationship="CREATE">
+      <point x="-39.25" y="-116.5" />
+      <point x="-820.25" y="211.0" />
+      <point x="-803.25" y="211.0" />
+      <point x="-42.25" y="80.5" />
+    </edge>
+    <edge source="RegionalLicensePlateStrategy" target="LicensePlateStrategy" relationship="REALIZATION">
+      <point x="0.0" y="-56.5" />
+      <point x="479.0" y="1971.0" />
+      <point x="377.25" y="1971.0" />
+      <point x="58.25" y="31.5" />
+    </edge>
+    <edge source="Main" target="StandardLicensePlateStrategy" relationship="CREATE">
+      <point x="0.0" y="-127.5" />
+      <point x="-841.0" y="2691.0" />
+      <point x="639.0" y="2691.0" />
+      <point x="0.0" y="43.5" />
+    </edge>
+    <edge source="Main" target="CarPurchaseCaretaker" relationship="CREATE">
+      <point x="0.0" y="-127.5" />
+      <point x="-841.0" y="2691.0" />
+      <point x="-761.0" y="2691.0" />
+      <point x="0.0" y="68.5" />
+    </edge>
+    <edge source="LicensePlateGenerator" target="LicensePlateStrategy" relationship="TO_ONE">
+      <point x="0.0" y="-80.5" />
+      <point x="259.0" y="2131.0" />
+      <point x="260.75" y="2131.0" />
+      <point x="-58.25" y="31.5" />
+    </edge>
+    <edge source="ChatServer" target="Subject" relationship="REALIZATION">
+      <point x="-117.75" y="-116.5" />
+      <point x="-898.75" y="211.0" />
+      <point x="-961.0" y="211.0" />
+      <point x="0.0" y="55.5" />
+    </edge>
+    <edge source="CarDataProxy" target="CarData" relationship="CREATE">
+      <point x="-60.25" y="-68.5" />
+      <point x="-60.25" y="31.5" />
+    </edge>
+    <edge source="Admin" target="ChatServer" relationship="TO_ONE">
+      <point x="0.0" y="-44.5" />
+      <point x="0.0" y="116.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.462977663675944" showDependencies="true" x="-141.95775630049343" y="469.8539032291776" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

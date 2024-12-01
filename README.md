@@ -1,7 +1,7 @@
 
 **Project: Kolesa.kz**
 
-Overview:
+**Overview:**
 This project demonstrates the implementation of various design patterns to manage and manipulate car-related data efficiently.
 Key features include iteration through car collections, license plate generation, car data filtering, and state management.
 
@@ -38,7 +38,7 @@ Design Patterns Used:
    - Classes: LicensePlateGenerator
    - Purpose: Ensures that a class has only one instance (e.g., a centralized license plate generator).
 
-Key Classes and Their Roles:
+**Key Classes and Their Roles:**
 1. CarIterator.java:
    - Defines the interface for the Iterator pattern.
    - Methods: hasNext(), next()
@@ -68,11 +68,15 @@ Key Classes and Their Roles:
 9. LicensePlateGenerator:
    - A Singleton class ensuring centralized license plate generation.
 
-Usage Instructions:
+**Usage Instructions:**
 - Run Main.java to start the application.
 - Use the Builder to create new cars.
 - Utilize the Adapter for currency conversion in transactions.
 - Observe events (e.g., balance updates) using the Observer pattern.
 - Manage car purchases with Memento for state saving/restoration.
 
-**Authors: Olzhas, Medet, Adilkhan**
+You can download the project from this link
+**##Authors**
+**- Olzhas Tuimekhan** [Backend Developer] 
+**- Medet Muratbek** [Backend Developer]
+**- Adilkhan Zharylapov** [Data Analyst]

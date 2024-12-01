@@ -75,8 +75,9 @@ Design Patterns Used:
 - Observe events (e.g., balance updates) using the Observer pattern.
 - Manage car purchases with Memento for state saving/restoration.
 
-You can download the project from this link
 **##Authors**
 **- Olzhas Tuimekhan** [Backend Developer] 
+
 **- Medet Muratbek** [Backend Developer]
+
 **- Adilkhan Zharylapov** [Data Analyst]

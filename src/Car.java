@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 class Car {
 
     private final int id;
@@ -36,7 +33,7 @@ class Car {
         this.vinCode = builder.vinCode;
     }
 
-    // Геттеры для всех полей
+
     public int getId() {
         return id;
     }
@@ -96,7 +93,7 @@ class Car {
         this.licensePlate = licensePlate;
     }
 
-    // Сеттер для isSold
+
     public void setSold(boolean sold) {
         isSold = sold;
     }
@@ -104,7 +101,7 @@ class Car {
 
     @Override
     public String toString() {
-        int width = 60; // Общая ширина рамки (включая границы)
+        int width = 60;
         String border = "━".repeat(width);
 
         return border + "\n" +
@@ -125,18 +122,13 @@ class Car {
                 border;
     }
 
-    // Вспомогательный метод для форматирования строки
+
     private String formatRow(String key, Object value, int width) {
         String content = String.format("▐ %-15s : %-"+(width - 20)+"s▐", key, value);
         return content + "\n";
     }
 
-
-
-
-
-
-
+//Builder pattern
     public static class CarBuilder {
         private final int id;
         private final String brand;
@@ -148,7 +140,7 @@ class Car {
         private String gearboxType;
         private String description;
         private double price;
-        private boolean isSold = false; // По умолчанию машина не продана
+        private boolean isSold = false;
         private String sellerPhone;
         private String vinCode;
         private String licensePlate;
@@ -160,7 +152,7 @@ class Car {
         }
 
         public CarBuilder year(int year) {
-            this.year = year > 0 ? year : 2000; // Значение по умолчанию
+            this.year = year > 0 ? year : 2000;
             return this;
         }
 

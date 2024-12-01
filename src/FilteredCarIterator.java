@@ -1,74 +1,47 @@
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 import java.util.function.Predicate;
 
+/**
+ * A filtered implementation of the CarIterator interface.
+ * Allows iteration over a collection of Car objects that match a specified filter condition.
+ */
 class FilteredCarIterator implements CarIterator {
-    private final List<Car> cars;
-    private final Predicate<Car> filter;
-    private int currentIndex = 0;
+    private final List<Car> cars; // List of cars to be filtered
+    private final Predicate<Car> filter; // Filter condition for cars
+    private int currentIndex = 0; // Current index in the list
 
+    /**
+     * Constructor to initialize the filtered iterator with a list of cars and a filter condition.
+     * @param cars   The list of cars to iterate over.
+     * @param filter The condition used to filter cars.
+     */
     public FilteredCarIterator(List<Car> cars, Predicate<Car> filter) {
         this.cars = cars;
         this.filter = filter;
     }
 
+    /**
+     * Checks if there are more elements in the collection that match the filter condition.
+     * @return true if there are more filtered elements, false otherwise.
+     */
     @Override
     public boolean hasNext() {
         while (currentIndex < cars.size()) {
+            // Test the current car against the filter condition
             if (filter.test(cars.get(currentIndex))) {
                 return true;
             }
             currentIndex++;
         }
-        return false;
+        return false; // No more filtered elements
     }
 
+    /**
+     * Retrieves the next Car object in the collection that matches the filter condition.
+     * @return the next Car object that satisfies the filter condition.
+     */
     @Override
     public Car next() {
-        return cars.get(currentIndex++);
-    }
-}
-
-
-
-// Основной класс программы
-class mainn {
-    public static void main(String[] args) {
-        List<Car> cars = CarData.getPredefinedCars();
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Welcome to the Car Management System with Iterator!");
-        while (true) {
-            System.out.println("\nMenu:");
-            System.out.println("1. Search By Brand");
-            System.out.println("2. Exit");
-            System.out.print("Choose an option: ");
-            int choice = scanner.nextInt();
-            scanner.nextLine();
-
-            if (choice == 1) {
-                System.out.print("\nEnter brand: ");
-                String brand = scanner.nextLine();
-
-                // Используем итератор для поиска
-                CarIterator iterator = new FilteredCarIterator(cars, car -> car.getBrand().equalsIgnoreCase(brand));
-                System.out.println("\nSearch Results:");
-                boolean found = false;
-                while (iterator.hasNext()) {
-                    found = true;
-                    System.out.println(iterator.next());
-                }
-                if (!found) {
-                    System.out.println("No cars found for the given brand.");
-                }
-            } else if (choice == 2) {
-                System.out.println("Exiting. Goodbye!");
-                break;
-            } else {
-                System.out.println("Invalid option. Try again.");
-            }
-        }
-        scanner.close();
+        return cars.get(currentIndex++); // Return the current car and move to the next
     }
 }

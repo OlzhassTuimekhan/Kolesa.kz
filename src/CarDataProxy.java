@@ -1,8 +1,8 @@
 import java.util.List;
 
 public class CarDataProxy {
-    private List<Car> cachedCars; // Кэш
-    private final CarData carData = new CarData(); // Основной источник данных
+    private List<Car> cachedCars;
+    private final CarData carData = new CarData();
 
     public List<Car> getPredefinedCars() {
         if (cachedCars == null) {

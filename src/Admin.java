@@ -18,7 +18,7 @@ public class Admin {
                 System.exit(0);
                 break;
             }
-            server.broadcastMessageFromAdmin(message); // Отправляем сообщение всем клиентам
+            server.broadcastMessageFromAdmin(message);
         }
         scanner.close();
     }

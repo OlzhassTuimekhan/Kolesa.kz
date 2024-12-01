@@ -1,5 +1,6 @@
 import java.util.Stack;
 
+//CareTaker for Memento Pattern
 public class CarPurchaseCaretaker {
     private final Stack<CarPurchaseMemento> mementos = new Stack<>();
 
@@ -11,7 +12,7 @@ public class CarPurchaseCaretaker {
         if (!mementos.isEmpty()) {
             return mementos.pop();
         }
-        return null; // Если откат невозможен
+        return null;
     }
 
     public boolean hasUndo() {

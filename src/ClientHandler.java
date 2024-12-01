@@ -21,12 +21,12 @@ class ClientHandler implements Runnable, Observer {
             String message;
             while ((message = reader.readLine()) != null) {
                 System.out.println("Received: " + message);
-                server.notifyObservers(message); // Уведомляем всех о новом сообщении
+                server.notifyObservers(message);
             }
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            server.removeObserver(this); // Удаляем клиента при отключении
+            server.removeObserver(this);
             try {
                 socket.close();
             } catch (IOException e) {
@@ -38,7 +38,7 @@ class ClientHandler implements Runnable, Observer {
     @Override
     public void update(String message) {
         if (out != null) {
-            out.println(message); // Отправляем сообщение клиенту
+            out.println(message);
         }
     }
 }

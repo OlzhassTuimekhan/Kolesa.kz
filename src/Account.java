@@ -2,17 +2,17 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class Account {
-    private static Account instance; // Единственный экземпляр
-    private final BalanceManager balanceManager; // Управление балансом
-    private final List<Car> ownedCars; // Список приобретённых машин
+    private static Account instance;
+    private final BalanceManager balanceManager;
+    private final List<Car> ownedCars;
 
-    // Приватный конструктор для предотвращения создания экземпляров извне
+
     Account(BalanceManager balanceManager) {
         this.balanceManager = balanceManager;
         this.ownedCars = new ArrayList<>();
     }
 
-    // Метод для получения единственного экземпляра
+
     public static Account getInstance(BalanceManager balanceManager) {
         if (instance == null) {
             instance = new Account(balanceManager);
@@ -20,26 +20,26 @@ public class Account {
         return instance;
     }
 
-    // Добавить машину в список
+
     public void addCar(Car car) {
         ownedCars.add(car);
     }
 
-    // Удалить машину из списка
+
     public void removeCar(Car car) {
         ownedCars.remove(car);
     }
 
     public List<Car> getOwnedCars() {
-        return new ArrayList<>(ownedCars); // Возвращаем копию списка машин
+        return new ArrayList<>(ownedCars);
     }
 
-    // Создать снимок состояния
+    //Memento Pattern
     public CarPurchaseMemento saveState() {
         return new CarPurchaseMemento(ownedCars, balanceManager.getBalanceInKZT());
     }
 
-    // Восстановить состояние
+
     public void restoreState(CarPurchaseMemento memento) {
         if (memento != null) {
             ownedCars.clear();
@@ -48,7 +48,7 @@ public class Account {
         }
     }
 
-    // Показать информацию об аккаунте
+
     public void showAccountDetails() {
         System.out.println("\n--- My Account ---");
         balanceManager.showBalance();

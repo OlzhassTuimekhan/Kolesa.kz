@@ -4,11 +4,11 @@ import java.util.*;
 
 public class ChatServer implements Subject {
     private final List<Observer> observers = new ArrayList<>();
-    private static ChatServer instance; // Единственный экземпляр сервера
+    private static ChatServer instance;
 
     private ChatServer() {}
 
-    // Метод для получения единственного экземпляра
+
     public static synchronized ChatServer getInstance() {
         if (instance == null) {
             instance = new ChatServer();
@@ -17,21 +17,21 @@ public class ChatServer implements Subject {
     }
 
     public void startServer() {
-        try (ServerSocket serverSocket = new ServerSocket(8888)) { // Используем порт 8888
+        try (ServerSocket serverSocket = new ServerSocket(8888)) {
             System.out.println("Server started. Waiting for clients...");
             while (true) {
                 Socket clientSocket = serverSocket.accept();
                 System.out.println("\nServer: New client connected.");
                 ClientHandler clientHandler = new ClientHandler(clientSocket, this);
-                addObserver(clientHandler); // Добавляем клиента как наблюдателя
-                new Thread(clientHandler).start(); // Обрабатываем клиента в отдельном потоке
+                addObserver(clientHandler);
+                new Thread(clientHandler).start();
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    // Реализация методов Subject
+
     @Override
     public synchronized void addObserver(Observer observer) {
         observers.add(observer);
@@ -51,6 +51,6 @@ public class ChatServer implements Subject {
     }
 
     public void broadcastMessageFromAdmin(String message) {
-        notifyObservers("[ADMIN]: " + message); // Уведомляем всех наблюдателей
+        notifyObservers("[ADMIN]: " + message);
     }
 }

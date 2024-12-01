@@ -10,9 +10,9 @@ public class RegionalLicensePlateStrategy implements LicensePlateStrategy {
 
     @Override
     public String generateLicensePlate() {
-        String letters = generateRandomLetters(3); // 3 случайных буквы
-        String numbers = String.format("%03d", new Random().nextInt(1000)); // 3 случайных цифры
-        return letters + numbers + region; // Регион указывается при создании стратегии
+        String letters = generateRandomLetters(3);
+        String numbers = String.format("%03d", new Random().nextInt(1000));
+        return letters + numbers + region;
     }
 
     private String generateRandomLetters(int count) {
